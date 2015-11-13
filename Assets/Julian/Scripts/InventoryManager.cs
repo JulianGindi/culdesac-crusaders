@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour {
 	public void AddItemToInventory(GameObject item) {
 		if (CheckInventorySize()) {
 			// We still have room, so we will add the item to the inventory
-			if (item.CompareTag("Item") && item) {
+			if (item) {
 				inventory.Add(item);
 				Destroy(item);
 			}

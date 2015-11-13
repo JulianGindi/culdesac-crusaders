@@ -6,6 +6,10 @@ public class PlayerController : MonoBehaviour {
 	bool inObjectRange;
 	GameObject itemToPickup;
 
+	void Start() {
+		inObjectRange = false;
+	}
+
 	void Update() {
 		if (Input.GetKey ("e")) {
 			// Add item to inventory
