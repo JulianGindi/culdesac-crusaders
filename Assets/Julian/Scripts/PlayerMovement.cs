@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
+		float moveHorizontal = Input.GetAxisRaw ("Horizontal");
+		float moveVertical = Input.GetAxisRaw ("Vertical");
 		
 		MoveCharacter (moveHorizontal, moveVertical);
 	}
@@ -26,7 +26,13 @@ public class PlayerMovement : MonoBehaviour {
 		if (h != 0f || v != 0f) {
 			Vector3 movement = new Vector3 (h, 0.0f, v);
 			Rotating (h, v);
-			rb.AddForce (movement * movementSpeed);
+			// rb.AddForce (movement * movementSpeed);
+
+			// Normalise the movement vector and make it proportional to the speed per second.
+			movement = movement.normalized * movementSpeed * Time.deltaTime;
+			
+			// Move the player to it's current position plus the movement.
+			rb.MovePosition (transform.position + movement);
 		}
 	}
 	
