@@ -1,17 +1,39 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
 
+	public static InventoryManager instance = null;
+
 	public int inventorySize;
 
-	// Use this for initialization
-	void Start () {
-	
+	public List <GameObject> inventory;
+
+	void Awake () {
+		if (instance == null)
+			instance = this;
+		else if (instance != this)
+			Destroy (gameObject);
+		
+		DontDestroyOnLoad (gameObject);
+
+		inventory = new List <GameObject> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void AddItemToInventory(GameObject item) {
+		if (CheckInventorySize()) {
+			// We still have room, so we will add the item to the inventory
+			if (item.CompareTag("Item") && item) {
+				inventory.Add(item);
+				Destroy(item);
+			}
+		}
+	}
+
+	bool CheckInventorySize() {
+		if (inventory.Count > inventorySize)
+			return false;
+		return true;
 	}
 }
