@@ -187,6 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 2
   turnSmoothing: 15
+  smoothTime: .300000012
 --- !u!54 &607671097
 Rigidbody:
   m_ObjectHideFlags: 0

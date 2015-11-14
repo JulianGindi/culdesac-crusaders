@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour {
 	float horizontalInput;
 	float verticalInput;
 	Vector3 velocity = Vector3.zero;
+	Animator anim;
 
 	Rigidbody rb;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody>();
+		anim = GetComponent<Animator> ();
 	}
 
 	void FixedUpdate () {
@@ -34,6 +36,9 @@ public class PlayerMovement : MonoBehaviour {
 			
 			// Move the player to it's current position plus the movement.
 			rb.MovePosition (transform.position + movement);
+			anim.SetBool ("isRunning", true);
+		} else {
+			anim.SetBool ("isRunning", false);
 		}
 	}
 	
