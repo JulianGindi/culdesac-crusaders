@@ -150,6 +150,19 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 1ba251d351690de41a12020b5527ebe7, type: 3}
   m_PrefabInternal: {fileID: 1138071035}
+--- !u!136 &607671094
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607671092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: .5, z: 0}
 --- !u!114 &607671095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a5b5e7b99c945b4a61321426962259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: .600000024
+  movementSpeed: 2
   turnSmoothing: 15
 --- !u!54 &607671097
 Rigidbody:

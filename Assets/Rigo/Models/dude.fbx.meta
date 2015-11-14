@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1ba251d351690de41a12020b5527ebe7
-timeCreated: 1447463155
+timeCreated: 1447465807
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -24,6 +24,14 @@ ModelImporter:
     100032: RightUpperArm
     100034: RightWrist
     100036: Spine
+    100038: Skeleton_RightFoot_L
+    100040: Skeleton_RightFoot_R
+    100042: Skeleton_RightKnee_L
+    100044: Skeleton_RightKnee_R
+    100046: Skeleton_RightToe_L
+    100048: Skeleton_RightToe_R
+    100050: Skeleton_RightUpLeg_L
+    100052: Skeleton_RightUpLeg_R
     400000: Body
     400002: //RootNode
     400004: Head
@@ -43,6 +51,14 @@ ModelImporter:
     400032: RightUpperArm
     400034: RightWrist
     400036: Spine
+    400038: Skeleton_RightFoot_L
+    400040: Skeleton_RightFoot_R
+    400042: Skeleton_RightKnee_L
+    400044: Skeleton_RightKnee_R
+    400046: Skeleton_RightToe_L
+    400048: Skeleton_RightToe_R
+    400050: Skeleton_RightUpLeg_L
+    400052: Skeleton_RightUpLeg_R
     4300000: Body
     9500000: //RootNode
     13700000: Body
@@ -105,50 +121,50 @@ ModelImporter:
       humanName: LeftUpperLeg
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 60, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: RightUpLeg
       humanName: RightUpperLeg
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 60, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: LeftKnee
       humanName: LeftLowerLeg
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 90, y: 0, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: RightKnee
       humanName: RightLowerLeg
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 90, y: 0, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: LeftFoot
       humanName: LeftFoot
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 30, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: RightFoot
       humanName: RightFoot
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 30, z: 0}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: Spine
       humanName: Spine
       limit:
@@ -169,18 +185,18 @@ ModelImporter:
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 100}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: RightUpperArm
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 100}
         value: {x: 0, y: 0, z: 0}
         length: 0
-        modified: 0
+        modified: 1
     - boneName: LeftForearm
       humanName: LeftLowerArm
       limit:
@@ -331,7 +347,7 @@ ModelImporter:
     legTwist: .5
     armStretch: .0500000007
     legStretch: .0500000007
-    feetSpacing: 0
+    feetSpacing: .67900002
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
