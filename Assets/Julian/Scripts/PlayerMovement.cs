@@ -4,10 +4,12 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	public float movementSpeed = 0.6f;
-	public float turnSmoothing = 15f;   // A smoothing value for turning the player.
+	public float turnSmoothing = 15f;
+	public float smoothTime = 0.3F;
 
 	float horizontalInput;
 	float verticalInput;
+	Vector3 velocity = Vector3.zero;
 
 	Rigidbody rb;
 
@@ -26,7 +28,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (h != 0f || v != 0f) {
 			Vector3 movement = new Vector3 (h, 0.0f, v);
 			Rotating (h, v);
-			// rb.AddForce (movement * movementSpeed);
 
 			// Normalise the movement vector and make it proportional to the speed per second.
 			movement = movement.normalized * movementSpeed * Time.deltaTime;

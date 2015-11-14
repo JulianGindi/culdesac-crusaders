@@ -291,6 +291,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1308733907}
   - 114: {fileID: 1308733906}
+  - 114: {fileID: 1308733908}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -323,6 +324,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1308733908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1308733905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935212dc3c5b746ec8e86324f8c4cf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftingBuffer: []
 --- !u!1001 &1323408938
 Prefab:
   m_ObjectHideFlags: 0
@@ -902,6 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 4
   turnSmoothing: 10
+  smoothTime: .300000012
 --- !u!114 &2031132953
 MonoBehaviour:
   m_ObjectHideFlags: 0

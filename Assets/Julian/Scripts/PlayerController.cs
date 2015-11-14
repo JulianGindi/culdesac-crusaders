@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetKey ("e")) {
+		if (Input.GetKey ("e") && inObjectRange) {
 			// Add item to inventory
 			inObjectRange = false;
 			InventoryManager.instance.AddItemToInventory(itemToPickup);

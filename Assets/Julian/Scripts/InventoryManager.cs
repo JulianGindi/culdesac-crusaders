@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour {
 
 	public List <GameObject> inventory;
 
+	public List<GameObject> craftingBuffer; // This will hold items from inventory that will be used for crafting
+
 	void Awake () {
 		if (instance == null)
 			instance = this;
@@ -18,6 +20,7 @@ public class InventoryManager : MonoBehaviour {
 		
 		DontDestroyOnLoad (gameObject);
 
+		craftingBuffer = new List<GameObject>();
 		inventory = new List <GameObject> ();
 	}
 
@@ -26,7 +29,7 @@ public class InventoryManager : MonoBehaviour {
 			// We still have room, so we will add the item to the inventory
 			if (item) {
 				inventory.Add(item);
-				Destroy(item);
+				item.SetActive(false);
 			}
 		}
 	}
@@ -36,4 +39,8 @@ public class InventoryManager : MonoBehaviour {
 			return false;
 		return true;
 	}
+	
+	void AddCraftableItemsToBuffer(GameObject itemToAdd) {
+		craftingBuffer.Add (itemToAdd);
+	}	
 }
