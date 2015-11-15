@@ -8,18 +8,6 @@ AnimatorController:
   m_Name: CharacterAnimationControllerJG
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Forward
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: Turn
-    m_Type: 1
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
   - m_Name: isRunning
     m_Type: 4
     m_DefaultFloat: 0
@@ -493,9 +481,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .25
+  m_TransitionDuration: 1.80879533
   m_TransitionOffset: 0
-  m_ExitTime: .747020483
+  m_ExitTime: .0975220129
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

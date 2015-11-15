@@ -4,12 +4,9 @@ using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
 
-	public static InventoryManager instance = null;
-
+	public static InventoryManager instance = null; // Ensures there is only one InventoryManager
 	public int inventorySize;
-
 	public List <GameObject> inventory;
-
 	public List<GameObject> craftingBuffer; // This will hold items from inventory that will be used for crafting
 
 	void Awake () {

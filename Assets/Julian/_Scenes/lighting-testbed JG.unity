@@ -131,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   turnSmoothing: 15
-  smoothTime: .300000012
 --- !u!65 &998084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ CapsuleCollider:
   m_Radius: .5
   m_Height: 1.08000004
   m_Direction: 1
-  m_Center: {x: 0, y: .519999981, z: .0900000036}
+  m_Center: {x: 0, y: .550000012, z: .0900000036}
 --- !u!95 &998086
 Animator:
   serializedVersion: 3
@@ -228,7 +227,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: .698529422, a: 1}
+  m_Color: {r: .882352948, g: .897768736, b: 1, a: 1}
   m_Intensity: 1.50999999
   m_Range: 10
   m_SpotAngle: 30
@@ -262,7 +261,7 @@ Transform:
   m_LocalScale: {x: 1, y: .999999881, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!1 &447828412
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,4 +966,4 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2

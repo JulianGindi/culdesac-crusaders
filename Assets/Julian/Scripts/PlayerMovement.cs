@@ -5,11 +5,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	public float movementSpeed = 0.6f;
 	public float turnSmoothing = 15f;
-	public float smoothTime = 0.3F;
 
 	float horizontalInput;
 	float verticalInput;
-	Vector3 velocity = Vector3.zero;
 	Animator anim;
 
 	Rigidbody rb;
@@ -28,6 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void MoveCharacter(float h, float v) {
 		if (h != 0f || v != 0f) {
+			anim.SetBool ("isRunning", true);
 			Vector3 movement = new Vector3 (h, 0.0f, v);
 			Rotating (h, v);
 
@@ -36,7 +35,6 @@ public class PlayerMovement : MonoBehaviour {
 			
 			// Move the player to it's current position plus the movement.
 			rb.MovePosition (transform.position + movement);
-			anim.SetBool ("isRunning", true);
 		} else {
 			anim.SetBool ("isRunning", false);
 		}
