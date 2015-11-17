@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	public Rigidbody baseball;
+	public float launchForce = 1000f;
+
 	bool inObjectRange;
 	GameObject itemToPickup;
 
@@ -16,9 +19,9 @@ public class PlayerController : MonoBehaviour {
 			inObjectRange = false;
 			InventoryManager.instance.AddItemToInventory(itemToPickup);
 			itemToPickup = null;
-		} else if (Input.GetKey ("q")) {
+		} else if (Input.GetKeyDown ("q")) {
 			// Throw Object...for now a baseball
-			ThrowObject();
+			ThrowBall();
 		}
 	}
 
@@ -30,7 +33,17 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void ThrowObject() {
+	void ThrowBall() {
+		float angle = 30.0f;
 
-	}
+		// calculate the elevation vector:
+		Vector3 forwards = transform.forward; // get the forward direction
+		Vector3 dir = new Vector3(forwards.x, 0f, forwards.z); // keep it in the horizontal plane
+		Vector3 norm = dir.normalized;
+		norm.y = Mathf.Sin(angle * Mathf.Deg2Rad); // set the desired elevation angle
+		// apply the velocity to the rigidbody:
+		Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f);
+		Rigidbody thrownBall = Instantiate(baseball, spawnPos, transform.rotation) as Rigidbody;
+		thrownBall.velocity = launchForce * norm.normalized;
+    }
 }

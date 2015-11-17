@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921062edf429e4d61991056f30fad43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseball: {fileID: 5441280, guid: 8ad4e86a90f5344658a0f7198bb64cc6, type: 2}
+  launchForce: 10
 --- !u!114 &998083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1170,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 8.31999969
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
