@@ -7,6 +7,7 @@ public class Patrol : MonoBehaviour {
 	public Transform[] points;
 	private int destPoint = 0;
 	private NavMeshAgent agent;
+	private bool foundBall;
 	
 	
 	void Start () {
@@ -16,14 +17,15 @@ public class Patrol : MonoBehaviour {
 		// between points (ie, the agent doesn't slow down as it
 		// approaches a destination point).
 		agent.autoBraking = false;
-		
+
+		foundBall = false;
 		GotoNextPoint();
 	}
 	
 	
 	void GotoNextPoint() {
 		// Returns if no points have been set up
-		if (points.Length == 0)
+		if (points.Length == 0 || foundBall == true)
 			return;
 		
 		// Set the agent to go to the currently selected destination.
@@ -40,5 +42,11 @@ public class Patrol : MonoBehaviour {
 		// close to the current one.
 		if (agent.remainingDistance < 0.5f)
 			GotoNextPoint();
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.CompareTag("Baseball")) {
+			agent.destination = other.attachedRigidbody.position;
+		}
 	}
 }
