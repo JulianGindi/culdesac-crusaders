@@ -13,15 +13,11 @@ public class AnimationDelegate : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void FixedUpdate () {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
         float moveVertical = Input.GetAxisRaw("Vertical");
+
         Vector3 speedVector = new Vector3(moveHorizontal, 0, moveVertical);
         float speedMagnitude = Vector3.Magnitude(speedVector);
         anim.SetFloat("Speed", speedMagnitude);
