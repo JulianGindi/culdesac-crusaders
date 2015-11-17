@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour {
 		float moveVertical = Input.GetAxisRaw ("Vertical");
 		
 		MoveCharacter (moveHorizontal, moveVertical);
-	}
+        print(moveHorizontal+ "  " + moveVertical);
+    }
 	
 	void MoveCharacter(float h, float v) {
 		if (h != 0f || v != 0f) {
