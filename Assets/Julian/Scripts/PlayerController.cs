@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour {
 			inObjectRange = false;
 			InventoryManager.instance.AddItemToInventory(itemToPickup);
 			itemToPickup = null;
+		} else if (Input.GetKey ("q")) {
+			// Throw Object...for now a baseball
+			ThrowObject();
 		}
 	}
 
@@ -25,5 +28,9 @@ public class PlayerController : MonoBehaviour {
 			itemToPickup = other.gameObject;
 			print("Press e to pickup item");
 		}
+	}
+
+	void ThrowObject() {
+
 	}
 }
