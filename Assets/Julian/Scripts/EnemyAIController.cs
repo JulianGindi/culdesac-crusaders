@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class Patrol : MonoBehaviour {
+public class EnemyAIController : MonoBehaviour {
 	
 	public Transform[] points;
 	private int destPoint = 0;
@@ -28,11 +28,7 @@ public class Patrol : MonoBehaviour {
 		if (points.Length == 0 || foundBall == true)
 			return;
 		
-		// Set the agent to go to the currently selected destination.
 		agent.destination = points[destPoint].position;
-		
-		// Choose the next point in the array as the destination,
-		// cycling to the start if necessary.
 		destPoint = (destPoint + 1) % points.Length;
 	}
 	
@@ -40,12 +36,13 @@ public class Patrol : MonoBehaviour {
 	void Update () {
 		// Choose the next destination point when the agent gets
 		// close to the current one.
-		if (agent.remainingDistance < 0.5f)
+		if (agent.remainingDistance < 0.5f && foundBall != true)
 			GotoNextPoint();
 	}
 
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Baseball")) {
+			foundBall = true;
 			agent.destination = other.attachedRigidbody.position;
 		}
 	}
