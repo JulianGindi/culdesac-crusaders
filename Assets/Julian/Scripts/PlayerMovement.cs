@@ -26,8 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	void MoveCharacter(float h, float v) {
 		if (h != 0f || v != 0f) {
-			anim.SetBool ("isRunning", true);
-			Vector3 movement = new Vector3 (h, 0.0f, v);
+			Vector3 movement = new Vector3 (h, 0f, v);
 			Rotating (h, v);
 
 			// Normalise the movement vector and make it proportional to the speed per second.
@@ -35,8 +34,6 @@ public class PlayerMovement : MonoBehaviour {
 			
 			// Move the player to it's current position plus the movement.
 			rb.MovePosition (transform.position + movement);
-		} else {
-			anim.SetBool ("isRunning", false);
 		}
 	}
 	

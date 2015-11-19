@@ -42,8 +42,6 @@ public class PlayerController : MonoBehaviour {
 		Vector3 norm = dir.normalized;
 		norm.y = Mathf.Sin(launchAngle * Mathf.Deg2Rad); // set the desired elevation angle
 
-		// apply the velocity to the rigidbody:
-		//Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f);
 		Rigidbody thrownBall = Instantiate(baseball, spawnLocation.position, transform.rotation) as Rigidbody;
 		thrownBall.velocity = launchForce * norm.normalized;
     }
