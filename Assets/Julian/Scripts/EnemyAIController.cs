@@ -5,13 +5,21 @@ using System.Collections;
 public class EnemyAIController : MonoBehaviour {
 	
 	public Transform[] points;
+	public Transform player;
+
+	// This is a variable for testing purposes. Should be removed before shipping the game.
+	// Allows developer to turn off patrolling to test other AI interactions.
+	public bool patrol;
+
 	private int destPoint = 0;
 	private NavMeshAgent agent;
 	private bool foundBall;
-	
+	private AIVision aiVision;
+
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();
+		aiVision = GetComponent<AIVision>();
 		
 		// Disabling auto-braking allows for continuous movement
 		// between points (ie, the agent doesn't slow down as it
@@ -19,7 +27,9 @@ public class EnemyAIController : MonoBehaviour {
 		agent.autoBraking = false;
 
 		foundBall = false;
-		GotoNextPoint();
+
+		if (patrol == true)
+			GotoNextPoint();
 	}
 	
 	
@@ -36,8 +46,13 @@ public class EnemyAIController : MonoBehaviour {
 	void Update () {
 		// Choose the next destination point when the agent gets
 		// close to the current one.
-		if (agent.remainingDistance < 0.5f && foundBall != true)
+		if (agent.remainingDistance < 0.5f && foundBall != true && patrol == true)
 			GotoNextPoint();
+
+		// Checking to see if player is in sight
+		if (aiVision.playerInSight == true) {
+			agent.destination = player.position;
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {

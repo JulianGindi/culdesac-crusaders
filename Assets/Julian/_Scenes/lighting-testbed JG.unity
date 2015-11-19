@@ -714,11 +714,13 @@ GameObject:
   - 4: {fileID: 791046982}
   - 33: {fileID: 791046981}
   - 136: {fileID: 791046980}
+  - 135: {fileID: 791046985}
   - 23: {fileID: 791046979}
   - 195: {fileID: 791046984}
   - 114: {fileID: 791046983}
+  - 114: {fileID: 791046986}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: TestAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,6 +797,8 @@ MonoBehaviour:
   - {fileID: 1927767263}
   - {fileID: 2002061762}
   - {fileID: 1561130909}
+  player: {fileID: 1380240120}
+  patrol: 0
 --- !u!195 &791046984
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -815,6 +819,33 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &791046985
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791046978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.31999993
+  m_Center: {x: 5.96046448e-08, y: 0, z: -8.94069672e-08}
+--- !u!114 &791046986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791046978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841054fcb2da64c839d8c90c47e5f7bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldOfViewAngle: 110
+  playerInSight: 0
+  personalLastSighting: {x: 0, y: 0, z: 0}
+  dumbSight: 1
 --- !u!1 &960537510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1108,7 @@ GameObject:
   - 114: {fileID: 1380240122}
   m_Layer: 0
   m_Name: dude2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1138,7 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a5b5e7b99c945b4a61321426962259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
+  movementSpeed: 4
   turnSmoothing: 10
 --- !u!65 &1380240124
 BoxCollider:
