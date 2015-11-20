@@ -9,6 +9,7 @@ TagManager:
   - ItemSquare
   - ItemCapsule
   - ItemCyl
+  - UI:Selectable
   layers:
   - Default
   - TransparentFX
