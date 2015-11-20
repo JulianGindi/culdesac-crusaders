@@ -4,7 +4,7 @@ using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
 
-	public static InventoryManager instance = null; // Ensures there is only one InventoryManager
+	public static InventoryManager instance = null;
 	public int inventorySize;
 	public List <GameObject> inventory;
 	public List<GameObject> craftingBuffer; // This will hold items from inventory that will be used for crafting
@@ -29,6 +29,18 @@ public class InventoryManager : MonoBehaviour {
 				item.SetActive(false);
 			}
 		}
+	}
+
+	// This function will take what is in the crafting buffer and try to create
+	// a prank out of it. If successfull, it will instantiate the prank at the specified
+	// location
+	public GameObject CraftPrank(string prankName, Transform spawnLocation) {
+		GameObject newPrank = new GameObject();
+
+		// Will compare to make sure these items are present int he buffer
+		// TODO: Probably figure out a better way to handle these "recipes"
+		string[] craftTags = new string[] {"Cyl", "Capsule", "Square"};
+		return newPrank;
 	}
 
 	bool CheckInventorySize() {

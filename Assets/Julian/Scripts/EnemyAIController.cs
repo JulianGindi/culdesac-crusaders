@@ -9,7 +9,7 @@ public class EnemyAIController : MonoBehaviour {
 
 	// This is a variable for testing purposes. Should be removed before shipping the game.
 	// Allows developer to turn off patrolling to test other AI interactions.
-	public bool patrol;
+	public bool patrol = true;
 
 	private int destPoint = 0;
 	private NavMeshAgent agent;
@@ -53,6 +53,10 @@ public class EnemyAIController : MonoBehaviour {
 		if (aiVision.playerInSight == true) {
 			agent.destination = player.position;
 		}
+
+		// Check to see if player has hit car too many times (stupid test for now)
+		if (GameManager.instance.playerInfamy > 5f)
+			agent.destination = player.position;
 	}
 
 	void OnTriggerEnter(Collider other) {

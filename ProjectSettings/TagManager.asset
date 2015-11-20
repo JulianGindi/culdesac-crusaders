@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Item
   - Baseball
+  - ItemSquare
+  - ItemCapsule
+  - ItemCyl
   layers:
   - Default
   - TransparentFX

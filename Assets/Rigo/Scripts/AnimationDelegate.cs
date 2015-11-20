@@ -4,12 +4,10 @@ using System.Collections;
 public class AnimationDelegate : MonoBehaviour {
 
     Animator anim;
-    Rigidbody rb;
     public float walkingSpeedMultipler;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 

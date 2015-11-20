@@ -8,13 +8,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	float horizontalInput;
 	float verticalInput;
-	Animator anim;
 
 	Rigidbody rb;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody>();
-		anim = GetComponent<Animator> ();
 	}
 
 	void FixedUpdate () {

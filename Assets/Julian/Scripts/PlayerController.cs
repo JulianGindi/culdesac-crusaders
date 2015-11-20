@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag ("Item")) {
+		if (other.gameObject.tag.Contains ("Item")) {
 			inObjectRange = true;
 			itemToPickup = other.gameObject;
 			print("Press e to pickup item");
