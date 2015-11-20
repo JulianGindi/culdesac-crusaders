@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Baseball
+  - UI:Selectable
   layers:
   - Default
   - TransparentFX
