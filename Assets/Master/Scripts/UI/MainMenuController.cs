@@ -6,6 +6,11 @@ public class MainMenuController : MonoBehaviour {
 
 	public GameObject[] items;
 
+    void Start() {
+        closeAllChildren();
+        gameObject.SetActive(false);
+    }
+
 	public void updateSelected(BaseEventData eventData){
 		print (eventData);
 	}
@@ -23,10 +28,10 @@ public class MainMenuController : MonoBehaviour {
 
 	public void selectedChild(UISelectable child){
 		foreach(GameObject c in items){
-			c.GetComponent<UISelectable>().ShowAsInactive();
+			c.GetComponent<UISelectable>().ShowAsUnhighlighted();
 		}
 
-		child.ShowAsActive();
+		child.ShowAsHighlighted();
 	}
 
 	public void submit(){
