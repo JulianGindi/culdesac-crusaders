@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour {
 	public int inventorySize;
 	public List <GameObject> inventory;
 	public List<GameObject> craftingBuffer; // This will hold items from inventory that will be used for crafting
+	public GameObject inventoryUI;
 
 	void Awake () {
 		if (instance == null)
@@ -27,6 +28,7 @@ public class InventoryManager : MonoBehaviour {
 			if (item) {
 				inventory.Add(item);
 				item.SetActive(false);
+				UpdateInventoryUI();
 			}
 		}
 	}
@@ -41,6 +43,12 @@ public class InventoryManager : MonoBehaviour {
 		// TODO: Probably figure out a better way to handle these "recipes"
 		string[] craftTags = new string[] {"Cyl", "Capsule", "Square"};
 		return newPrank;
+	}
+
+
+	// TODO: Rigo implement
+	public void UpdateInventoryUI() {
+
 	}
 
 	bool CheckInventorySize() {
