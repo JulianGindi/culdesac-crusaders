@@ -5,13 +5,15 @@ public class GameManager : MonoBehaviour
 {
 	
 	public static GameManager instance = null;
-
 	public float playerInfamy;
 	public GameObject personObject;
 
+    private PlayerController pc;
+    private PlayerMovement pm;
+    private AnimationDelegate ad;
 
-	// Boilerplate static GameManager stuff
-	void Awake () {
+    // Boilerplate static GameManager stuff
+    void Awake () {
 		if (instance == null)
 			instance = this;
 		else if (instance != this)
@@ -22,5 +24,22 @@ public class GameManager : MonoBehaviour
 	
 	void Start() {
 		playerInfamy = 0f;
-	}
+
+        pc = personObject.GetComponent<PlayerController>();
+        pm = personObject.GetComponent<PlayerMovement>();
+        ad = personObject.GetComponent<AnimationDelegate>();
+    }
+
+    public void DisableInputForAvatar() {
+        pc.enabled = false;
+        pm.enabled = false;
+        ad.enabled = false;
+    }
+
+    public void EnableInputForAvatar()
+    {
+        pc.enabled = true;
+        pm.enabled = true;
+        ad.enabled = true;
+    }
 }
