@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour {
 
@@ -11,7 +12,22 @@ public class MainMenuController : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-	public void updateSelected(BaseEventData eventData){
+    public void disableAllSelectableChildren() {
+        foreach (GameObject c in items)
+        {
+            c.GetComponent<Selectable>().enabled = false;
+        }
+    }
+
+    public void enableAllSelectableChildren()
+    {
+        foreach (GameObject c in items)
+        {
+            c.GetComponent<Selectable>().enabled = true;
+        }
+    }
+
+    public void updateSelected(BaseEventData eventData){
 		print (eventData);
 	}
 
@@ -29,10 +45,10 @@ public class MainMenuController : MonoBehaviour {
 	public void selectedChild(UISelectable child){
 		foreach(GameObject c in items){
 			c.GetComponent<UISelectable>().ShowAsUnhighlighted();
-		}
+        }
 
 		child.ShowAsHighlighted();
-	}
+    }
 
 	public void submit(){
 		foreach(GameObject c in items){
@@ -41,6 +57,7 @@ public class MainMenuController : MonoBehaviour {
 
 		GameObject selected = EventSystem.current.currentSelectedGameObject;
 		selected.GetComponent<UISelectable>().openLinkedView();
-	}
+        disableAllSelectableChildren();
+    }
 
 }

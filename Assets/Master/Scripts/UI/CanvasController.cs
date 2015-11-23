@@ -37,11 +37,13 @@ public class CanvasController : MonoBehaviour {
         {
             // If we're opening the main menu, pre-highlight the first option.
             MainMenu.GetComponent<MainMenuController>().setFirstChildSelected();
+            MainMenu.GetComponent<MainMenuController>().enableAllSelectableChildren();
             gm.DisableInputForAvatar();
         } else
         {
             // If we're closing the main menu. close all children too.
             MainMenu.GetComponent<MainMenuController>().closeAllChildren();
+            MainMenu.GetComponent<MainMenuController>().disableAllSelectableChildren();
             gm.EnableInputForAvatar();
         }
     }

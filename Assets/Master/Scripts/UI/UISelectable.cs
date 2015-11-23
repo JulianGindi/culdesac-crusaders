@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class UISelectable : MonoBehaviour, ISelectHandler, IDeselectHandler, ISubmitHandler {
 
 	protected MainMenuController parentController;
-	public GameObject viewToOpen; 
+	public GameObject viewToOpen;
+    public GameObject firstSelected;
 
 	void Awake(){
 		parentController = (MainMenuController) transform.parent.gameObject.GetComponent<MainMenuController>();
@@ -71,6 +72,9 @@ public class UISelectable : MonoBehaviour, ISelectHandler, IDeselectHandler, ISu
 	public void openLinkedView(){
         ShowAsActive();
 		viewToOpen.SetActive(true);
+        if (firstSelected) {
+            EventSystem.current.SetSelectedGameObject(firstSelected, null);
+        }
 	}
 
 }
