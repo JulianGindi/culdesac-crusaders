@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine.UI;
 
-public class UIInventoryItem : UISelectable
+public class UIInventoryItem : UISelectableItem
 {
     public string ItemID;
 

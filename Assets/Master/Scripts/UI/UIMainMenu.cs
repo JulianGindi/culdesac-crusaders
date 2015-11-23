@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using UnityEngine.UI;
 
-public class MainMenuController : MonoBehaviour {
+public class UIMainMenu : MonoBehaviour {
 
 	public GameObject[] items;
 
@@ -38,13 +38,13 @@ public class MainMenuController : MonoBehaviour {
 
 	public void closeAllChildren(){
 		foreach(GameObject c in items){
-			c.GetComponent<UISelectable>().closeLinkedView();
+			c.GetComponent<UIMainMenuItem>().closeLinkedView();
 		}
 	}
 
-	public void selectedChild(UISelectable child){
+	public void selectedChild(UIMainMenuItem child){
 		foreach(GameObject c in items){
-			c.GetComponent<UISelectable>().ShowAsUnhighlighted();
+			c.GetComponent<UIMainMenuItem>().ShowAsUnhighlighted();
         }
 
 		child.ShowAsHighlighted();
@@ -52,11 +52,11 @@ public class MainMenuController : MonoBehaviour {
 
 	public void submit(){
 		foreach(GameObject c in items){
-			c.GetComponent<UISelectable>().closeLinkedView();
+			c.GetComponent<UIMainMenuItem>().closeLinkedView();
 		}
 
 		GameObject selected = EventSystem.current.currentSelectedGameObject;
-		selected.GetComponent<UISelectable>().openLinkedView();
+		selected.GetComponent<UIMainMenuItem>().openLinkedView();
         disableAllSelectableChildren();
     }
 
