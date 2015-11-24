@@ -36,14 +36,14 @@ public class CanvasController : MonoBehaviour {
         if (MainMenu.activeInHierarchy)
         {
             // If we're opening the main menu, pre-highlight the first option.
-            MainMenu.GetComponent<MainMenuController>().setFirstChildSelected();
-            MainMenu.GetComponent<MainMenuController>().enableAllSelectableChildren();
+            MainMenu.GetComponent<UIMainMenu>().setFirstChildSelected();
+            MainMenu.GetComponent<UIMainMenu>().enableAllSelectableChildren();
             gm.DisableInputForAvatar();
         } else
         {
             // If we're closing the main menu. close all children too.
-            MainMenu.GetComponent<MainMenuController>().closeAllChildren();
-            MainMenu.GetComponent<MainMenuController>().disableAllSelectableChildren();
+            MainMenu.GetComponent<UIMainMenu>().closeAllChildren();
+            MainMenu.GetComponent<UIMainMenu>().disableAllSelectableChildren();
             gm.EnableInputForAvatar();
         }
     }

@@ -48,8 +48,9 @@ public class InventoryManager : MonoBehaviour {
 
 	// TODO: Rigo implement
 	public void UpdateInventoryUI() {
-
-	}
+        UIInventoryMenu inventoryMenu = inventoryUI.GetComponent<UIInventoryMenu>();
+        inventoryMenu.RefreshAllItems(inventory);
+    }
 
 	bool CheckInventorySize() {
 		if (inventory.Count > inventorySize)
