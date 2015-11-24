@@ -1622,6 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechCanvas: {fileID: 833609706}
+  SpeechBubble: {fileID: 22459960, guid: bd645d76245600a4089699a508e753c6, type: 2}
 --- !u!1 &1138007501
 GameObject:
   m_ObjectHideFlags: 0
