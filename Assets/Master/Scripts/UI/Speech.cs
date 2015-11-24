@@ -43,7 +43,7 @@ public class Speech : MonoBehaviour {
         rt.anchoredPosition = new Vector2(positioning.x, positioning.y + VERTICAL_OFFSET);
 
         newElement.SetParent(speechCanvas.transform);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         Destroy(newElement.gameObject);
     }
 
