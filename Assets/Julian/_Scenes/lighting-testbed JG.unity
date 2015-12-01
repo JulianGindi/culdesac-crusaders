@@ -2900,11 +2900,11 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 635a3217664faa7439cd2eccc1db5d08, type: 2}
-  - {fileID: 2100000, guid: 95aa96957b315054987f94752c6c0bf1, type: 2}
-  - {fileID: 2100000, guid: 794337419f4bd644186f85c37bf8f3b7, type: 2}
-  - {fileID: 2100000, guid: f56eb05b972068b42973384d951b8811, type: 2}
-  - {fileID: 2100000, guid: 56d13fe54c1e9bb4fa85084df81a7715, type: 2}
+  - {fileID: 2100000, guid: 3789fe589ab26ae49bb8ae717bf9c530, type: 2}
+  - {fileID: 2100000, guid: 3789fe589ab26ae49bb8ae717bf9c530, type: 2}
+  - {fileID: 2100000, guid: 3789fe589ab26ae49bb8ae717bf9c530, type: 2}
+  - {fileID: 2100000, guid: 3789fe589ab26ae49bb8ae717bf9c530, type: 2}
+  - {fileID: 2100000, guid: 3789fe589ab26ae49bb8ae717bf9c530, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -3461,6 +3461,18 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 367ae325a33122b49bcdc938eafdf21f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbc085e88514d9347b421c74c93d6e5e, type: 2}
+    - target: {fileID: 2300004, guid: 367ae325a33122b49bcdc938eafdf21f, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbc085e88514d9347b421c74c93d6e5e, type: 2}
+    - target: {fileID: 2300002, guid: 367ae325a33122b49bcdc938eafdf21f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fbc085e88514d9347b421c74c93d6e5e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 367ae325a33122b49bcdc938eafdf21f, type: 3}
   m_IsPrefabParent: 0

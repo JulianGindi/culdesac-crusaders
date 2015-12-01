@@ -10,6 +10,8 @@ public class UIInventoryMenu : UIMenu {
     public Transform uiElement;
     public GameObject firstSelected;
 
+	// Grab a copy of inventoryManager
+
     public void RefreshAllItems(List<GameObject> inventory) {
         RemoveAllItems();
         AddAllItems(inventory);

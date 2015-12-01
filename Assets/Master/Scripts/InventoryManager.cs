@@ -37,12 +37,17 @@ public class InventoryManager : MonoBehaviour {
 	// a prank out of it. If successfull, it will instantiate the prank at the specified
 	// location
 	public GameObject CraftPrank(string prankName, Transform spawnLocation) {
+
 		GameObject newPrank = new GameObject();
 
 		// Will compare to make sure these items are present int he buffer
 		// TODO: Probably figure out a better way to handle these "recipes"
 		string[] craftTags = new string[] {"Cyl", "Capsule", "Square"};
 		return newPrank;
+	}
+
+	public void RespondToCraftEvent() {
+		print ("Button press worked");
 	}
 
 
