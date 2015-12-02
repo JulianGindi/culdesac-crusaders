@@ -50,8 +50,7 @@ public class InventoryManager : MonoBehaviour {
 		print ("Button press worked");
 	}
 
-
-	// TODO: Rigo implement
+	
 	public void UpdateInventoryUI() {
         UIInventoryMenu inventoryMenu = inventoryUI.GetComponent<UIInventoryMenu>();
         inventoryMenu.RefreshAllItems(inventory);
