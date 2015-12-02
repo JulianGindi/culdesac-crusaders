@@ -50,6 +50,12 @@ public class InventoryManager : MonoBehaviour {
 		print ("Button press worked");
 	}
 
+	// This function will get called when a player "selects" an item to use in crafting
+	public void RespondToItemClick() {
+
+
+	}
+
 	
 	public void UpdateInventoryUI() {
         UIInventoryMenu inventoryMenu = inventoryUI.GetComponent<UIInventoryMenu>();
