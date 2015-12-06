@@ -15,7 +15,7 @@ ModelImporter:
     3300002: Mesh
     4300000: Mesh
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
   animations:

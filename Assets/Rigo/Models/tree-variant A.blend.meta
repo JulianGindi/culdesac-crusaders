@@ -1,32 +1,17 @@
 fileFormatVersion: 2
-guid: 5019491ef8347bc40ad181edd3ab9551
-timeCreated: 1447291415
+guid: 631f0d348be0a7b40b98399293c6ab4d
+timeCreated: 1449342985
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: Chimney
-    100002: //RootNode
-    100004: MainFloor
-    100006: Roof
-    100008: Windows
-    400000: Chimney
-    400002: //RootNode
-    400004: MainFloor
-    400006: Roof
-    400008: Windows
-    2300000: Chimney
-    2300002: MainFloor
-    2300004: Roof
-    2300006: Windows
-    3300000: Chimney
-    3300002: MainFloor
-    3300004: Roof
-    3300006: Windows
-    4300000: Chimney
-    4300002: Roof
-    4300004: MainFloor
-    4300006: Windows
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Foliage
+    7400000: Default Take
+    9500000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0
@@ -85,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
