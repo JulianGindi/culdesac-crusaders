@@ -29,7 +29,7 @@ public class Speech : MonoBehaviour {
     }
 
     IEnumerator Speak() {
-        string phrases = System.IO.File.ReadAllText("Assets/Text/sample_speech.txt");
+        string phrases = System.IO.File.ReadAllText("Assets/Master/Text/sample_speech.txt");
         string[] phrasesArr = phrases.Split('\n');
         string phrase = phrasesArr[Random.Range(0, phrasesArr.Length - 1)];
         int numberOfLines = phrase.Length / CHARS_PER_LINE;
