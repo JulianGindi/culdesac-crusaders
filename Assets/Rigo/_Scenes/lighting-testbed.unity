@@ -3227,7 +3227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySize: 10
   inventory: []
-  craftingBuffer: []
   inventoryUI: {fileID: 1089353775}
 --- !u!4 &1873913515
 Transform:

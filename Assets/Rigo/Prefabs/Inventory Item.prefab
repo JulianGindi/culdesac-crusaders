@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewToOpen: {fileID: 0}
-  firstSelected: {fileID: 0}
   ItemID: A
 --- !u!114 &11436592
 MonoBehaviour:
