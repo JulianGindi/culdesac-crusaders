@@ -676,6 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseball: {fileID: 0}
+  spawnLocation: {fileID: 0}
   launchForce: 1000
   launchAngle: 30
 --- !u!136 &13615266

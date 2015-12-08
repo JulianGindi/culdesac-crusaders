@@ -545,7 +545,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewToOpen: {fileID: 0}
-  firstSelected: {fileID: 0}
   ItemID: C
 --- !u!114 &11428214
 MonoBehaviour:
@@ -621,8 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3366b384be02e17478f4c0613986f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewToOpen: {fileID: 187600}
-  firstSelected: {fileID: 0}
+  viewToOpen: {fileID: 0}
 --- !u!114 &11434350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -796,7 +794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewToOpen: {fileID: 0}
-  firstSelected: {fileID: 0}
   ItemID: A
 --- !u!114 &11448844
 MonoBehaviour:
@@ -1037,8 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3366b384be02e17478f4c0613986f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewToOpen: {fileID: 193032}
-  firstSelected: {fileID: 199846}
+  viewToOpen: {fileID: 0}
 --- !u!114 &11459508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1068,6 +1064,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4473aa356655d564fa47ee979e2e0fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grid: {fileID: 0}
+  uiElement: {fileID: 0}
+  firstSelected: {fileID: 0}
 --- !u!114 &11461218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1152,7 +1151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewToOpen: {fileID: 0}
-  firstSelected: {fileID: 0}
   ItemID: B
 --- !u!114 &11470428
 MonoBehaviour:
@@ -1165,8 +1163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3366b384be02e17478f4c0613986f92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewToOpen: {fileID: 187600}
-  firstSelected: {fileID: 0}
+  viewToOpen: {fileID: 0}
 --- !u!114 &11472194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1427,7 +1424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewToOpen: {fileID: 0}
-  firstSelected: {fileID: 0}
   ItemID: D
 --- !u!114 &11494658
 MonoBehaviour:
