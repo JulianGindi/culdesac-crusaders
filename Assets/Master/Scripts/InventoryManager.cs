@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour {
 
@@ -55,9 +55,12 @@ public class InventoryManager : MonoBehaviour {
 	}
 
 	string GetInventoryTagString() {
-		foreach (var item in inventory) {
-			print(item);
+		List <string> tags = new List<string>();
+		foreach (GameObject item in inventory) {
+			tags.Add(item.tag);
 		}
+		string tagString = string.Join(" ", tags.ToArray());
+		print(tagString);
 		return "foo";
 	}
 
