@@ -23,7 +23,9 @@ public class InputUtils : MonoBehaviour {
         {
             if (!respondedToButtonRelease)
             {
-                keyReleaseHandler();
+                if (keyReleaseHandler != null) {
+                    keyReleaseHandler();
+                }
             }
             respondedToButtonPress = false;
             respondedToButtonRelease = true;
