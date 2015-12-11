@@ -3,8 +3,10 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public Rigidbody baseball;
-	public Transform spawnLocation;
+    private InputUtils inputUtils;
+
+    public GameObject spawnLocationObj;
+    public GameObject projectileToSpawn;
 	public float launchForce = 1000f;
 	public float launchAngle = 30.0f;
 
@@ -13,7 +15,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Start() {
 		inObjectRange = false;
-	}
+        inputUtils = gameObject.AddComponent<InputUtils>();
+    }
 
 	void Update() {
 		if (Input.GetKey ("e") && inObjectRange) {
@@ -21,11 +24,9 @@ public class PlayerController : MonoBehaviour {
 			inObjectRange = false;
 			InventoryManager.instance.AddItemToInventory(itemToPickup);
 			itemToPickup = null;
-		} else if (Input.GetKeyDown ("q")) {
-			// Throw Object...for now a baseball
-			ThrowBall();
 		}
-	}
+        inputUtils.AxisToActionEvent("Fire1", ThrowBall, null);
+    }
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag.Contains ("Item")) {
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 		Vector3 norm = dir.normalized;
 		norm.y = Mathf.Sin(launchAngle * Mathf.Deg2Rad); // set the desired elevation angle
 
-		Rigidbody thrownBall = Instantiate(baseball, spawnLocation.position, transform.rotation) as Rigidbody;
-		thrownBall.velocity = launchForce * norm.normalized;
+        GameObject thrownProjectile = Instantiate(projectileToSpawn, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+		thrownProjectile.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
     }
 }
