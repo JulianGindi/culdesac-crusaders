@@ -60,8 +60,7 @@ public class InventoryManager : MonoBehaviour {
 			tags.Add(item.tag);
 		}
 		string tagString = string.Join(" ", tags.ToArray());
-		print(tagString);
-		return "foo";
+		return tagString;
 	}
 
 	bool CheckInventorySize() {
