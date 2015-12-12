@@ -8,26 +8,19 @@ public class CanvasController : MonoBehaviour {
     public GameObject MainMenu;
     public GameObject Inventory;
 
+    private InputUtils inputUtils;
     private bool respondedToButtonPress;
     private GameManager gm;
 
     // Use this for initialization
     void Start () {
         gm = FindObjectOfType<GameManager>();
+        inputUtils = gameObject.AddComponent<InputUtils>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetAxis("Cancel") > 0)
-        {
-            if (!respondedToButtonPress) {
-                RespondToButtonPress();
-			}
-            respondedToButtonPress = true;
-        }
-        else {
-            respondedToButtonPress = false;
-        }
+        inputUtils.AxisToActionEvent("Fire3", RespondToButtonPress, null);
     }
 
     void RespondToButtonPress() {
