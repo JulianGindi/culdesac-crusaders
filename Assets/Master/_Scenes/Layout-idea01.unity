@@ -763,32 +763,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11457916, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: speechCanvas
-      value: 
-      objectReference: {fileID: 435621428}
-    - target: {fileID: 11469764, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: spawnLocationObj
-      value: 
-      objectReference: {fileID: 863708351}
-    - target: {fileID: 11469764, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: baseball
-      value: 
-      objectReference: {fileID: 109666, guid: 0d861ce033496a14da47e0de80c62a4f, type: 2}
-    - target: {fileID: 11469764, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: projectileToSpawn
-      value: 
-      objectReference: {fileID: 109666, guid: 0d861ce033496a14da47e0de80c62a4f, type: 2}
-    - target: {fileID: 404742, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: .513000011
-      objectReference: {fileID: 0}
-    - target: {fileID: 149390, guid: b39429531915a4530b2906a96727eba9, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6548404, guid: b39429531915a4530b2906a96727eba9, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b39429531915a4530b2906a96727eba9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &794693406
@@ -863,10 +838,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 794693406}
---- !u!1 &863708351 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 110372, guid: b39429531915a4530b2906a96727eba9, type: 2}
-  m_PrefabInternal: {fileID: 783883348}
 --- !u!1 &957563521
 GameObject:
   m_ObjectHideFlags: 0

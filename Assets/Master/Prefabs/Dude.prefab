@@ -115,7 +115,6 @@ GameObject:
   - 4: {fileID: 445996}
   - 95: {fileID: 9558414}
   - 54: {fileID: 5484890}
-  - 65: {fileID: 6548404}
   - 136: {fileID: 13628122}
   - 114: {fileID: 11443358}
   - 114: {fileID: 11469764}
@@ -346,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110372}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .374000013, z: .513000011}
+  m_LocalPosition: {x: 0, y: .374000013, z: .822000027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 445996}
@@ -498,7 +497,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 1}
+  m_LocalPosition: {x: 8.39999962, y: 0, z: 8.38000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430160}
@@ -639,18 +638,6 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!65 &6548404
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149390}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: 0, y: .5, z: 0}
 --- !u!95 &9558414
 Animator:
   serializedVersion: 3
@@ -717,9 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 921062edf429e4d61991056f30fad43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseball: {fileID: 5441280, guid: 8ad4e86a90f5344658a0f7198bb64cc6, type: 2}
-  spawnLocationObj: {fileID: 0}
-  projectileToSpawn: {fileID: 0}
+  spawnLocationObj: {fileID: 110372}
+  projectileToSpawn: {fileID: 109666, guid: 0d861ce033496a14da47e0de80c62a4f, type: 2}
   launchForce: 15
   launchAngle: 30
 --- !u!136 &13628122
