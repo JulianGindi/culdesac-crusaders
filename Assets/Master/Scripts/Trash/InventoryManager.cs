@@ -49,9 +49,21 @@ public class InventoryManager : MonoBehaviour {
 	//GameObject[] FindMatchingPranks() {
 	void FindMatchingPranks() {
 		// First we will get all the items in our inventory
+		string currentItems = GetInventoryTagString();
 		// Than we will see if they match any in our given "recipes"
-		string[] testRecipe = new string[] {"Cyl", "Capsule", "Square"};
-		GetInventoryTagString();
+		// TODO: Figure out a better way of handling this
+		string[] testRecipe = new string[] {"testPrank", "Cyl", "Capsule", "Square"};
+
+		bool hasPrank = true;
+
+		foreach (string item in testRecipe) {
+			if (!currentItems.Contains(item)) {
+				hasPrank = false;
+			}
+		}
+
+		print(hasPrank);
+
 	}
 
 	string GetInventoryTagString() {

@@ -6,10 +6,8 @@ TagManager:
   tags:
   - Item
   - Baseball
-  - ItemSquare
-  - ItemCapsule
-  - ItemCyl
   - UI:Selectable
+  - FireCracker
   layers:
   - Default
   - TransparentFX
