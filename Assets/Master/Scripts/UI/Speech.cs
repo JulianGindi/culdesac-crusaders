@@ -21,7 +21,7 @@ public class Speech : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        inputUtils.AxisToActionEvent("Submit", RespondToButtonPress, RespondToButtonRelease);
+        inputUtils.AxisToActionEvent("Fire2", RespondToButtonPress, RespondToButtonRelease);
     }
 
     void RespondToButtonPress() {
