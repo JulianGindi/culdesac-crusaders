@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour {
 		// Now we will create an instance of whatever the 'current prank' is
 
 
-        GameObject thrownProjectile = Instantiate(projectileToSpawn, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+        GameObject thrownProjectile = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
 		thrownProjectile.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
     }
 }

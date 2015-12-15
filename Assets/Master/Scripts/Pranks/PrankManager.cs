@@ -24,7 +24,7 @@ public class PrankManager : MonoBehaviour {
 	}
 	
 	void Start() {
-		FireCracker fc = new FireCracker("firecracker");
-		activePrank = fc;
+		// For testing, we are making the active prank the first one
+		activePrank = availablePranks[0];
 	}
 }
