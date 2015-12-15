@@ -19,13 +19,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void Update() {
-		if (Input.GetKey ("e") && inObjectRange) {
-			// Add item to inventory
-			inObjectRange = false;
-			InventoryManager.instance.AddItemToInventory(itemToPickup);
-			itemToPickup = null;
-		}
-        inputUtils.AxisToActionEvent("Fire1", ThrowBall, null);
+        inputUtils.AxisToActionEvent("Fire1", ThrowCurrentPrank, null);
     }
 
 	void OnTriggerEnter(Collider other) {
@@ -36,12 +30,15 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void ThrowBall() {
+	void ThrowCurrentPrank() {
 		// calculate the elevation vector:
 		Vector3 forwards = transform.forward; // get the forward direction
 		Vector3 dir = new Vector3(forwards.x, 0f, forwards.z); // keep it in the horizontal plane
 		Vector3 norm = dir.normalized;
 		norm.y = Mathf.Sin(launchAngle * Mathf.Deg2Rad); // set the desired elevation angle
+
+		// Now we will create an instance of whatever the 'current prank' is
+
 
         GameObject thrownProjectile = Instantiate(projectileToSpawn, spawnLocationObj.transform.position, transform.rotation) as GameObject;
 		thrownProjectile.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;

@@ -6,6 +6,7 @@ public class Loader : MonoBehaviour {
 	
 	public GameObject inventoryManager;
 	public GameObject gameManager;
+	public GameObject prankManager;
 	
 	void Awake () {
 		if (InventoryManager.instance == null)
@@ -13,5 +14,8 @@ public class Loader : MonoBehaviour {
 
 		if (GameManager.instance == null)
 			Instantiate(gameManager);
+
+		if (PrankManager.instance == null)
+			Instantiate(prankManager);
 	}
 }
