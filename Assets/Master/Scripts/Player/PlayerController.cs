@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Start() {
 		inPrankRange = false;
+        inputUtils = gameObject.AddComponent<InputUtils>();
+    }
+
+	void Update() {
+        inputUtils.AxisToActionEvent("Fire1", ThrowCurrentPrank, null);
 
 		if (Input.GetKey ("e") && inPrankRange) {
 			// Add item to inventory
@@ -22,12 +27,6 @@ public class PlayerController : MonoBehaviour {
 			PrankManager.instance.AddPrankToActive(prankToAdd);
 			prankToAdd = null;
 		}
-
-        inputUtils = gameObject.AddComponent<InputUtils>();
-    }
-
-	void Update() {
-        inputUtils.AxisToActionEvent("Fire1", ThrowCurrentPrank, null);
     }
 
 	void OnTriggerEnter(Collider other) {
@@ -49,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 
         GameObject thrownObject = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+		thrownObject.SetActive(true);
 		thrownObject.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
     }
 }

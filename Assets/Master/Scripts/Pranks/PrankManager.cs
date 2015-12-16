@@ -25,7 +25,9 @@ public class PrankManager : MonoBehaviour {
 
 	public void AddPrankToActive(GameObject prankToAdd) {
 		availablePranks.Add(prankToAdd);
+		prankToAdd.SetActive(false);
 
+		print (availablePranks.Count);
 		if (availablePranks.Count == 1)
 			activePrank = availablePranks[0];
 	}
