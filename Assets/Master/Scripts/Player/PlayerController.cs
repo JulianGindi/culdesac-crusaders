@@ -10,11 +10,19 @@ public class PlayerController : MonoBehaviour {
 	public float launchForce = 1000f;
 	public float launchAngle = 30.0f;
 
-	bool inObjectRange;
-	GameObject itemToPickup;
+	bool inPrankRange;
+	GameObject prankToAdd;
 
 	void Start() {
-		inObjectRange = false;
+		inPrankRange = false;
+
+		if (Input.GetKey ("e") && inPrankRange) {
+			// Add item to inventory
+			inPrankRange = false;
+			PrankManager.instance.AddPrankToActive(prankToAdd);
+			prankToAdd = null;
+		}
+
         inputUtils = gameObject.AddComponent<InputUtils>();
     }
 
@@ -23,9 +31,9 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag.Contains ("Item")) {
-			inObjectRange = true;
-			itemToPickup = other.gameObject;
+		if (other.gameObject.tag.Contains ("Prank")) {
+			inPrankRange = true;
+			prankToAdd = other.gameObject;
 			print("Press e to pickup item");
 		}
 	}
@@ -40,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 		// Now we will create an instance of whatever the 'current prank' is
 
 
-        GameObject thrownProjectile = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
-		thrownProjectile.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
+        GameObject thrownObject = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+		thrownObject.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
     }
 }

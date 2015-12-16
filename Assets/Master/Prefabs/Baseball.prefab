@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11409362}
   m_Layer: 0
   m_Name: Baseball
-  m_TagString: Baseball
+  m_TagString: Prank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.86382675, y: .125, z: 10.7492199}
+  m_LocalPosition: {x: -.610305786, y: .125, z: 13.5521088}
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c3c14b1861e433ea36bc78ce2cdda9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  displayName: 
 --- !u!135 &13517970
 SphereCollider:
   m_ObjectHideFlags: 1

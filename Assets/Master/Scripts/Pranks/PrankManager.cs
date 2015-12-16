@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PrankManager : MonoBehaviour {
 
@@ -7,13 +8,12 @@ public class PrankManager : MonoBehaviour {
 	public GameObject personObject;
 
 	// A public list of currently-available Pranks
-	public Prank[] availablePranks;
+	public List <GameObject> availablePranks;
 
 	// We also want to know which prank is currently "active"
-	public Prank activePrank;
-
-
-	// Boilerplate static GameManager stuff
+	public GameObject activePrank;
+	
+	// Boilerplate static Manager stuff
 	void Awake () {
 		if (instance == null)
 			instance = this;
@@ -22,9 +22,24 @@ public class PrankManager : MonoBehaviour {
 		
 		DontDestroyOnLoad (gameObject);
 	}
-	
-	void Start() {
-		// For testing, we are making the active prank the first one
-		activePrank = availablePranks[0];
+
+	public void AddPrankToActive(GameObject prankToAdd) {
+		availablePranks.Add(prankToAdd);
+
+		if (availablePranks.Count == 1)
+			activePrank = availablePranks[0];
+	}
+
+	public void SwitchPrank() {
+		if (availablePranks.Count > 1) {
+			int currentPrankIndex = availablePranks.IndexOf(activePrank);
+			int newPrankIndex = currentPrankIndex += 1;
+
+			if (newPrankIndex > availablePranks.Count) {
+				activePrank = availablePranks[0];
+			} else {
+				activePrank = availablePranks[newPrankIndex];
+			}
+		}
 	}
 }

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class FireCracker : Prank, Prank.IPrankable {
 
-	public FireCracker(string name): base(name) {
-		name = name;
+	public FireCracker(string pName): base(pName) {
+		displayName = pName;
 	}
 	
 	public void Trigger() {
