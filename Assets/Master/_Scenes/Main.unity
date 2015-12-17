@@ -1295,6 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: firecracker
+  displayName: firecracker
 --- !u!136 &674854828
 CapsuleCollider:
   m_ObjectHideFlags: 0

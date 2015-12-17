@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
 			inPrankRange = false;
 			PrankManager.instance.AddPrankToActive(prankToAdd);
 			prankToAdd = null;
+		} else if (Input.GetKeyDown("q")) {
+			PlaceCurrentPrank();
 		}
     }
 
@@ -35,6 +37,18 @@ public class PlayerController : MonoBehaviour {
 			prankToAdd = other.gameObject;
 			print("Press e to pickup item");
 		}
+	}
+
+	void PlaceCurrentPrank() {
+		// Place prank slightly in front of the user on the ground
+		Vector3 placeLocation = new Vector3(transform.position.x + 1f, 0f, transform.position.z);
+	
+		// Now we will create an instance of whatever the 'current prank' is
+		GameObject placedPrank = Instantiate(PrankManager.instance.activePrank, placeLocation, Quaternion.identity) as GameObject;
+		placedPrank.SetActive(true);
+		// TODO: Figure out how to do this whole trigger thingy
+		placedPrank.SendMessage("Trigger");
+		//placedPrank.Trigger();
 	}
 
 	void ThrowCurrentPrank() {
