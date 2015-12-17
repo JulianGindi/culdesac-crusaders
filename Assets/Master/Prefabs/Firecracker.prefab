@@ -27,9 +27,12 @@ GameObject:
   - 4: {fileID: 452864}
   - 33: {fileID: 3372916}
   - 23: {fileID: 2303572}
+  - 54: {fileID: 5452090}
+  - 136: {fileID: 13652114}
+  - 114: {fileID: 11474950}
   m_Layer: 0
   m_Name: Firecracker
-  m_TagString: Untagged
+  m_TagString: Prank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,8 +90,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 9.89999962, y: 0, z: 6.01999998}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 457850}
   m_Father: {fileID: 0}
@@ -151,6 +154,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179798}
   m_Mesh: {fileID: 4300000, guid: 79cb8ad5e0ab1d446a8483cf9455ab65, type: 3}
+--- !u!54 &5452090
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179798}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &11474950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c3c14b1861e433ea36bc78ce2cdda9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayName: firecracker
+--- !u!136 &13652114
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0133217815
+  m_Height: .0250000004
+  m_Direction: 2
+  m_Center: {x: -0, y: 5.96046448e-08, z: 0}
 --- !u!198 &19836354
 ParticleSystem:
   m_ObjectHideFlags: 1

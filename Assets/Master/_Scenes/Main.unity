@@ -1264,50 +1264,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 412472, guid: 849c66115ad9bcb4d902060fe0b03c07, type: 2}
   m_PrefabInternal: {fileID: 841136667}
---- !u!1 &674854822 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 179798, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
-  m_PrefabInternal: {fileID: 703894001}
---- !u!54 &674854824
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674854822}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &674854826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674854822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5c3c14b1861e433ea36bc78ce2cdda9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayName: firecracker
---- !u!136 &674854828
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 674854822}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0133217815
-  m_Height: .0250000004
-  m_Direction: 2
-  m_Center: {x: -0, y: 5.96046448e-08, z: 0}
 --- !u!1001 &703894001
 Prefab:
   m_ObjectHideFlags: 0
@@ -1317,7 +1273,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 11.1199999
+      value: 9.89999962
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1325,7 +1281,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 6.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1345,23 +1301,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 179798, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
-      propertyPath: m_TagString
-      value: Prank
+    - target: {fileID: 5452090, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
+    - target: {fileID: 5452090, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 3
+    - target: {fileID: 5452090, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
+      propertyPath: m_Constraints
+      value: 122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
