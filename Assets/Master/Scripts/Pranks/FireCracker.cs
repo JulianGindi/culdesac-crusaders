@@ -3,13 +3,8 @@ using System.Collections;
 
 public class FireCracker : Prank, Prank.IPrankable {
 
-	public string displayName;
-
-	public FireCracker(string pName): base(pName) {
-		displayName = pName;
-	}
-	
 	public void Trigger() {
-		print ("Prank triggering");
+		GameObject particle = gameObject.transform.GetChild(0).gameObject;
+		particle.GetComponent<ParticleSystem>().Play();
 	}
 }
