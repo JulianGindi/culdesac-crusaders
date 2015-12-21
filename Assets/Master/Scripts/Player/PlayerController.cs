@@ -15,17 +15,14 @@ public class PlayerController : MonoBehaviour {
 
 	void Update() {
         if (Input.GetButtonDown("Throw")) {
-            print("throw");
             ThrowCurrentPrank();
         }
         if (Input.GetButtonDown("Place"))
         {
-            print("place");
             PlaceCurrentPrank();
         }
         if (Input.GetButtonDown("Pickup"))
         {
-            print("Pickup");
             Pickup();
         }
     }
