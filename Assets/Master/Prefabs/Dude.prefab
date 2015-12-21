@@ -116,11 +116,11 @@ GameObject:
   - 95: {fileID: 9558414}
   - 54: {fileID: 5484890}
   - 136: {fileID: 13628122}
+  - 65: {fileID: 6583534}
   - 114: {fileID: 11443358}
   - 114: {fileID: 11469764}
   - 114: {fileID: 11458712}
   - 114: {fileID: 11457916}
-  - 65: {fileID: 6583534}
   m_Layer: 0
   m_Name: Dude
   m_TagString: Untagged
