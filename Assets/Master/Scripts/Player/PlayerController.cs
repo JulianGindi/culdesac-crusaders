@@ -46,7 +46,15 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void PlaceCurrentPrank() {
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag.Contains("Prank"))
+        {
+            prankToAdd = null;
+        }
+    }
+
+    void PlaceCurrentPrank() {
         if (PrankManager.instance.activePrank != null) {
             // Now we will create an instance of whatever the 'current prank' is
             GameObject placedPrank = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, Quaternion.identity) as GameObject;
