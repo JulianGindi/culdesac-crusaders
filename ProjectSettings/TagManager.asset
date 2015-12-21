@@ -9,6 +9,7 @@ TagManager:
   - UI:Selectable
   - FireCracker
   - Prank
+  - Enemy
   layers:
   - Default
   - TransparentFX

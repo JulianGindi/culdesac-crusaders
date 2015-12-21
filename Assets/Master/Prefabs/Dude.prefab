@@ -120,6 +120,7 @@ GameObject:
   - 114: {fileID: 11469764}
   - 114: {fileID: 11458712}
   - 114: {fileID: 11457916}
+  - 65: {fileID: 6583534}
   m_Layer: 0
   m_Name: Dude
   m_TagString: Untagged
@@ -638,6 +639,18 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!65 &6583534
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149390}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 1.5}
+  m_Center: {x: 0, y: .579999983, z: 0}
 --- !u!95 &9558414
 Animator:
   serializedVersion: 3
@@ -706,8 +719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnLocationObj: {fileID: 110372}
   projectileToSpawn: {fileID: 109666, guid: 0d861ce033496a14da47e0de80c62a4f, type: 2}
-  launchForce: 15
-  launchAngle: 30
+  launchForce: 10
+  launchAngle: 25
 --- !u!136 &13628122
 CapsuleCollider:
   m_ObjectHideFlags: 1
