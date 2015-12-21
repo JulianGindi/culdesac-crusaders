@@ -8,11 +8,9 @@ public class PlayerController : MonoBehaviour {
 	public float launchForce = 1000f;
 	public float launchAngle = 30.0f;
 
-	bool inPrankRange;
 	GameObject prankToAdd;
 
 	void Start() {
-		inPrankRange = false;
     }
 
 	void Update() {
@@ -35,7 +33,6 @@ public class PlayerController : MonoBehaviour {
     void Pickup() {
         if (prankToAdd != null) {
             // Add item to inventory
-            inPrankRange = false;
             PrankManager.instance.AddPrankToActive(prankToAdd);
             prankToAdd = null;
         }
@@ -43,7 +40,6 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag.Contains ("Prank")) {
-			inPrankRange = true;
 			prankToAdd = other.gameObject;
 			print("Press e to pickup item");
 		}
