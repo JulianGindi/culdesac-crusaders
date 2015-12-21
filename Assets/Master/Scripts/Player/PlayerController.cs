@@ -17,13 +17,17 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Throw")) {
             ThrowCurrentPrank();
         }
-        if (Input.GetButtonDown("Place"))
+
+        if (Input.GetButtonDown("Pickup/Place"))
         {
-            PlaceCurrentPrank();
-        }
-        if (Input.GetButtonDown("Pickup"))
-        {
-            Pickup();
+            if (prankToAdd != null)
+            {
+                Pickup();
+            }
+            else {
+                PlaceCurrentPrank();
+            }
+
         }
     }
 
@@ -38,34 +42,36 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag.Contains ("Prank")) {
 			prankToAdd = other.gameObject;
-			print("Press e to pickup item" + other.gameObject.name);
+			print("Press e to pickup item: " + other.gameObject.name);
 		}
 	}
 
 	void PlaceCurrentPrank() {
-		// Now we will create an instance of whatever the 'current prank' is
-		GameObject placedPrank = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, Quaternion.identity) as GameObject;
-		placedPrank.SetActive(true);
-		// TODO: Figure out how to do this whole trigger thingy
-		placedPrank.SendMessage("Trigger");
-		//placedPrank.Trigger();
+        if (PrankManager.instance.activePrank != null) {
+            // Now we will create an instance of whatever the 'current prank' is
+            GameObject placedPrank = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, Quaternion.identity) as GameObject;
+            placedPrank.SetActive(true);
+            // TODO: Figure out how to do this whole trigger thingy
+            placedPrank.SendMessage("Trigger");
+        }
 	}
 
     void ThrowCurrentPrank() {
-        print("Throw Current Prank");
-        // calculate the elevation vector:
-        Vector3 forwards = transform.forward; // get the forward direction
-        Vector3 dir = new Vector3(forwards.x, 0f, forwards.z); // keep it in the horizontal plane
-        Vector3 norm = dir.normalized;
-        norm.y = Mathf.Sin(launchAngle * Mathf.Deg2Rad); // set the desired elevation angle
+        if (PrankManager.instance.activePrank != null) {
+            // calculate the elevation vector:
+            Vector3 forwards = transform.forward; // get the forward direction
+            Vector3 dir = new Vector3(forwards.x, 0f, forwards.z); // keep it in the horizontal plane
+            Vector3 norm = dir.normalized;
+            norm.y = Mathf.Sin(launchAngle * Mathf.Deg2Rad); // set the desired elevation angle
 
-        // Now we will create an instance of whatever the 'current prank' is
-        GameObject thrownObject = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
-        thrownObject.SetActive(true);
-        thrownObject.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
+            // Now we will create an instance of whatever the 'current prank' is
+            GameObject thrownObject = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+            thrownObject.SetActive(true);
+            thrownObject.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
 
-        // TODO: Figure out how to do this whole trigger thingy
-        thrownObject.SendMessage("Trigger");
+            // TODO: Figure out how to do this whole trigger thingy
+            thrownObject.SendMessage("Trigger");
+        }
     }
 
 	void UseOrThrow() {
