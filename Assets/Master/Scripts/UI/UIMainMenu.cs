@@ -51,6 +51,7 @@ public class UIMainMenu : MonoBehaviour {
     }
 
 	public void submit(){
+        print("submit");
 		foreach(GameObject c in items){
 			c.GetComponent<UIMainMenuItem>().closeLinkedView();
 		}

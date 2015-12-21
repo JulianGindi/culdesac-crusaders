@@ -8,7 +8,6 @@ public class CanvasController : MonoBehaviour {
     public GameObject MainMenu;
     public GameObject Inventory;
 
-    private bool respondedToButtonPress;
     private GameManager gm;
 
     // Use this for initialization
