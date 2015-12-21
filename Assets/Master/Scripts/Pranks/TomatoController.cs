@@ -23,7 +23,7 @@ public class TomatoController : Prank, Prank.IPrankable
             {
                 Vector3 projPosition = contact.point + contact.normal;
                 Quaternion projRotation = Quaternion.LookRotation(-1 * contact.normal, Vector3.up);
-                GameObject thrownProjectile = Instantiate(splat, projPosition, projRotation) as GameObject;
+                Instantiate(splat, projPosition, projRotation);
             }
 
         }
