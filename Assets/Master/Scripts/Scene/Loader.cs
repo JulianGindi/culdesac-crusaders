@@ -17,5 +17,8 @@ public class Loader : MonoBehaviour {
 
 		if (PrankManager.instance == null)
 			Instantiate(prankManager);
+
+		// Target 60fps
+		Application.targetFrameRate = 60;
 	}
 }

@@ -1040,6 +1040,10 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 149390, guid: b39429531915a4530b2906a96727eba9, type: 2}
   m_PrefabInternal: {fileID: 89568459}
+--- !u!4 &427394420 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 445996, guid: b39429531915a4530b2906a96727eba9, type: 2}
+  m_PrefabInternal: {fileID: 89568459}
 --- !u!1 &435621428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,7 +1470,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.89999962
+      value: 10.6599998
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1474,7 +1478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 6.01999998
+      value: 5.28999996
       objectReference: {fileID: 0}
     - target: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1503,6 +1507,14 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &703894002 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 179798, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
+  m_PrefabInternal: {fileID: 703894001}
+--- !u!4 &703894003 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 452864, guid: ff8396ba9ac614c868e028deeccb93d5, type: 2}
+  m_PrefabInternal: {fileID: 703894001}
 --- !u!4 &706492144 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412472, guid: 849c66115ad9bcb4d902060fe0b03c07, type: 2}
@@ -1779,6 +1791,68 @@ Transform:
   - {fileID: 789562962}
   m_Father: {fileID: 1215998707}
   m_RootOrder: 0
+--- !u!1 &853015500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 853015501}
+  - 114: {fileID: 853015502}
+  m_Layer: 0
+  m_Name: Entity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853015501
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853015500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427394420}
+  m_RootOrder: 3
+--- !u!114 &853015502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 853015500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 220721487, guid: 9fa2ecd1ff2ad394281dd3bf72c5b76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataSerializer:
+    _serializedData: <component version="1.3" type="RAIN.Entities.EntityRig"><fields><field
+      value="OnWhenSelected" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field
+      value="True" type="System.Boolean" id="_useUnityMessages" /><field type="RAIN.Entities.Entity"
+      reference="0" id="_entity" /></fields><references><reference type="RAIN.Entities.Entity"
+      refcount="1" id="0"><field value="Dude" type="System.String" id="_entityName"
+      /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
+      id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+      refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="player" type="System.String" id="_aspectName" /><field value="True"
+      type="System.Boolean" id="_isActive" /><field value="0,0,0.6,1" type="UnityEngine.Color"
+      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
+      value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference></references></component>
+    _serializedGameObjects:
+    - {fileID: 427394419}
+    - {fileID: 427394420}
+    _serializedCustomData: []
 --- !u!1001 &928169496
 Prefab:
   m_ObjectHideFlags: 0
@@ -2574,11 +2648,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.BasicMotor"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -4457,6 +4531,68 @@ Transform:
   - {fileID: 10038146}
   m_Father: {fileID: 2139238640}
   m_RootOrder: 2
+--- !u!1 &1916786799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1916786800}
+  - 114: {fileID: 1916786801}
+  m_Layer: 0
+  m_Name: Entity
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1916786800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916786799}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .333333343, y: .333333343, z: .333333343}
+  m_Children: []
+  m_Father: {fileID: 703894003}
+  m_RootOrder: 1
+--- !u!114 &1916786801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916786799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 220721487, guid: 9fa2ecd1ff2ad394281dd3bf72c5b76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataSerializer:
+    _serializedData: <component version="1.3" type="RAIN.Entities.EntityRig"><fields><field
+      value="OnWhenSelected" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field
+      value="True" type="System.Boolean" id="_useUnityMessages" /><field type="RAIN.Entities.Entity"
+      reference="0" id="_entity" /></fields><references><reference type="RAIN.Entities.Entity"
+      refcount="1" id="0"><field value="Firecracker" type="System.String" id="_entityName"
+      /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
+      id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+      refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="prank" type="System.String" id="_aspectName" /><field value="True"
+      type="System.Boolean" id="_isActive" /><field value="0.6,0,0.6,1" type="UnityEngine.Color"
+      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
+      value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference></references></component>
+    _serializedGameObjects:
+    - {fileID: 703894002}
+    - {fileID: 703894003}
+    _serializedCustomData: []
 --- !u!1 &1927051169
 GameObject:
   m_ObjectHideFlags: 0
