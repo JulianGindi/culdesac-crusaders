@@ -6,8 +6,9 @@ public class PlayerMovement : MonoBehaviour {
     private bool isRunning = false;
 
 	public float walkSpeed = 0.6f;
-	public float turnSmoothing = 15f;
     public float runSpeed = 3.5f;
+    public float turnSmoothing = 15f;
+    
 
     Rigidbody rb;
 
@@ -42,11 +43,9 @@ public class PlayerMovement : MonoBehaviour {
             if (isRunning)
             {
                 movement = movement.normalized * runSpeed * Time.deltaTime;
-                print(runSpeed);
             }
             else {
                 movement = movement.normalized * walkSpeed * Time.deltaTime;
-                print(walkSpeed);
             }
             
 			
