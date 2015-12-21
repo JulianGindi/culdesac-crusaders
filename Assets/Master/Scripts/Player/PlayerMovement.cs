@@ -3,32 +3,52 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public float movementSpeed = 0.6f;
+    private bool isRunning = false;
+
+	public float walkSpeed = 0.6f;
 	public float turnSmoothing = 15f;
+    public float runSpeed = 3.5f;
 
-	float horizontalInput;
-	float verticalInput;
-
-	Rigidbody rb;
+    Rigidbody rb;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody>();
-	}
+    }
 
 	void FixedUpdate () {
 		float moveHorizontal = Input.GetAxisRaw ("Horizontal");
 		float moveVertical = Input.GetAxisRaw ("Vertical");
-		
+
 		MoveCharacter (moveHorizontal, moveVertical);
     }
-	
-	void MoveCharacter(float h, float v) {
+
+    void Update()
+    {
+        if (Input.GetButton("Run"))
+        {
+            isRunning = true;
+        } else {
+            isRunning = false;
+        }
+    }
+
+    void MoveCharacter(float h, float v) {
 		if (h != 0f || v != 0f) {
 			Vector3 movement = new Vector3 (h, 0f, v);
 			Rotating (h, v);
 
-			// Normalise the movement vector and make it proportional to the speed per second.
-			movement = movement.normalized * movementSpeed * Time.deltaTime;
+            // Normalise the movement vector and make it proportional to the speed per second.
+
+            if (isRunning)
+            {
+                movement = movement.normalized * runSpeed * Time.deltaTime;
+                print(runSpeed);
+            }
+            else {
+                movement = movement.normalized * walkSpeed * Time.deltaTime;
+                print(walkSpeed);
+            }
+            
 			
 			// Move the player to it's current position plus the movement.
 			rb.MovePosition (transform.position + movement);

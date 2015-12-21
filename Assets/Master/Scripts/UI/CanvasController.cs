@@ -8,22 +8,23 @@ public class CanvasController : MonoBehaviour {
     public GameObject MainMenu;
     public GameObject Inventory;
 
-    private InputUtils inputUtils;
     private bool respondedToButtonPress;
     private GameManager gm;
 
     // Use this for initialization
     void Start () {
         gm = FindObjectOfType<GameManager>();
-        inputUtils = gameObject.AddComponent<InputUtils>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        inputUtils.AxisToActionEvent("Fire3", RespondToButtonPress, null);
+        if (Input.GetButtonDown("ToggleMenu"))
+        {
+            ToggleMenu();
+        }
     }
 
-    void RespondToButtonPress() {
+    void ToggleMenu() {
 
         MainMenu.SetActive(!MainMenu.activeInHierarchy);
         if (MainMenu.activeInHierarchy)
