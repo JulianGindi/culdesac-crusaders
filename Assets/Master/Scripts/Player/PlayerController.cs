@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag.Contains ("Prank")) {
 			prankToAdd = other.gameObject;
-			print("Press e to pickup item: " + other.gameObject.name);
 		}
 	}
 
