@@ -12,7 +12,7 @@ public class AttackPlayer : RAINAction
 {
 
 	public Expression TotalAmmo = new Expression();
-
+	
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
@@ -21,11 +21,14 @@ public class AttackPlayer : RAINAction
     public override ActionResult Execute(RAIN.Core.AI ai)
     {
 		// First we will retrieve the player we want to attack
+		GameObject playerToAttack = ai.WorkingMemory.GetItem<GameObject>("foundPlayer");
+
+		ai.Body.gameObject.GetComponent<EnemyAttackController>().AttackPlayer(playerToAttack.transform);
         return ActionResult.SUCCESS;
     }
 
     public override void Stop(RAIN.Core.AI ai)
     {
         base.Stop(ai);
-    }
+    }	
 }

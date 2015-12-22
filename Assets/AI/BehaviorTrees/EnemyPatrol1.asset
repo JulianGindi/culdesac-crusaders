@@ -41,9 +41,9 @@ MonoBehaviour:
       matchtype=&quot;best&quot; entityobjectvariable=&quot;foundPlayer&quot; debugbreak=&quot;False&quot;
       consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
       aspect=&quot;&amp;quot;player&amp;quot;&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
-      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
-      name=&quot;attackPlayer&quot; debugbreak=&quot;False&quot; classname=&quot;AttackPlayer&quot;
-      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;VG90YWxBbW1v&quot;
+      namespace=&quot;(global)&quot; name=&quot;attackPlayer&quot; debugbreak=&quot;False&quot;
+      classname=&quot;AttackPlayer&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
