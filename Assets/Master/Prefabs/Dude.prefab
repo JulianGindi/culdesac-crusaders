@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413908}
   m_Layer: 0
-  m_Name: Hip
+  m_Name: BoneSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ GameObject:
   - 4: {fileID: 430160}
   - 137: {fileID: 13735188}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,6 +229,22 @@ GameObject:
   - 4: {fileID: 430704}
   m_Layer: 0
   m_Name: LeftWrist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &174780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483664}
+  - 114: {fileID: 11405264}
+  m_Layer: 0
+  m_Name: Entity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,6 +520,7 @@ Transform:
   - {fileID: 430160}
   - {fileID: 413908}
   - {fileID: 404742}
+  - {fileID: 483664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &456676
@@ -586,6 +603,18 @@ Transform:
   - {fileID: 471844}
   m_Father: {fileID: 427776}
   m_RootOrder: 0
+--- !u!4 &483664
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 445996}
+  m_RootOrder: 3
 --- !u!4 &490096
 Transform:
   m_ObjectHideFlags: 1
@@ -668,6 +697,40 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11405264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 220721487, guid: 9fa2ecd1ff2ad394281dd3bf72c5b76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dataSerializer:
+    _serializedData: <component version="1.3" type="RAIN.Entities.EntityRig"><fields><field
+      value="OnWhenSelected" type="RAIN.Core.VisualModeEnum" id="_visualMode" /><field
+      value="True" type="System.Boolean" id="_useUnityMessages" /><field type="RAIN.Entities.Entity"
+      reference="0" id="_entity" /></fields><references><reference type="RAIN.Entities.Entity"
+      refcount="1" id="0"><field value="Dude" type="System.String" id="_entityName"
+      /><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
+      id="_form" gameobject="0" /><field type="System.Collections.Generic.List" id="_aspects"
+      elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
+      reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
+      refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
+      /><field value="player" type="System.String" id="_aspectName" /><field value="True"
+      type="System.Boolean" id="_isActive" /><field value="0,0,0.6,1" type="UnityEngine.Color"
+      id="_aspectColor" /><field value="-0.5" type="System.Single" id="_outlineColorOffset"
+      /><field value="0.4" type="System.Single" id="_selectionColorOffset" /><field
+      value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
+      id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
+      /></reference></references></component>
+    _serializedGameObjects:
+    - {fileID: 149390}
+    - {fileID: 445996}
+    _serializedCustomData: []
 --- !u!114 &11443358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -679,7 +742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55b0f843ae5af92448160cc8f0d9a3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeedMultipler: 1.5
 --- !u!114 &11457916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -704,7 +766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1a5b5e7b99c945b4a61321426962259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
+  walkSpeed: 2
+  runSpeed: 3.5
   turnSmoothing: 10
 --- !u!114 &11469764
 MonoBehaviour:
