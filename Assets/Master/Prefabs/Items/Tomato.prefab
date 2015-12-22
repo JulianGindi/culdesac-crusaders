@@ -13,9 +13,10 @@ GameObject:
   - 54: {fileID: 5442684}
   - 135: {fileID: 13538498}
   - 114: {fileID: 11471536}
+  - 65: {fileID: 6581710}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: Prank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109666}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: 7.85966492, y: 1.67700005, z: .736999989}
+  m_LocalPosition: {x: 11.5751495, y: .0663908869, z: 7.71820068}
   m_LocalScale: {x: .0951446295, y: .0951446295, z: .0951446295}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,6 +80,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6581710
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.51999998, y: 6.9000001, z: 5.05000019}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11471536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185d5eba939b0d444a00e8bccb558cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: Tomato
+  UI_icon: {fileID: 21300000, guid: b1f0451f0c3ee704f951a04fddd91721, type: 3}
   splat: {fileID: 142250, guid: 7cfddc539add9864499a5f90c6c94ae8, type: 2}
 --- !u!135 &13538498
 SphereCollider:
@@ -118,6 +133,11 @@ Prefab:
       propertyPath: splat
       value: 
       objectReference: {fileID: 142250, guid: 7cfddc539add9864499a5f90c6c94ae8, type: 2}
+    - target: {fileID: 0}
+      propertyPath: UI_icon
+      value: 
+      objectReference: {fileID: 21300000, guid: b1f0451f0c3ee704f951a04fddd91721,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109666}

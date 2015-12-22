@@ -7,7 +7,6 @@ public class Speech : MonoBehaviour {
     public GameObject speechCanvas;
     public Transform SpeechBubble;
 
-    private InputUtils inputUtils;
     private const int WIDTH = 640;
     private const int VERTICAL_PADDING = 64;
     private const int VERTICAL_OFFSET = 64;
@@ -16,16 +15,14 @@ public class Speech : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        inputUtils = gameObject.AddComponent<InputUtils>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        inputUtils.AxisToActionEvent("Fire2", RespondToButtonPress, RespondToButtonRelease);
-    }
-
-    void RespondToButtonPress() {
-        StartCoroutine(Speak());
+        if (Input.GetButtonDown("Speak"))
+        {
+            Speak();
+        }
     }
 
     IEnumerator Speak() {
@@ -47,7 +44,4 @@ public class Speech : MonoBehaviour {
         Destroy(newElement.gameObject);
     }
 
-    void RespondToButtonRelease() {
-        //print("RespondToButtonRelease");
-    }
 }
