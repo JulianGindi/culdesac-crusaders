@@ -13,7 +13,7 @@ public class Portal : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        other.SendMessage("CrossedPortalTo", exitPortal.GetComponent<Portal>());
+        other.SendMessage("CrossedPortalTo", exitPortal.GetComponent<Portal>(), SendMessageOptions.DontRequireReceiver);
     }
 
     public Vector3 GetExitPoint() {
