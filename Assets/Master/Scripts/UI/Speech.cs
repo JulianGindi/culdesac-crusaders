@@ -21,7 +21,7 @@ public class Speech : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("Speak"))
         {
-            Speak();
+            StartCoroutine(Speak());
         }
     }
 
@@ -39,9 +39,15 @@ public class Speech : MonoBehaviour {
         rt.sizeDelta = new Vector2(WIDTH, (numberOfLines * HEIGHT_PER_LINE) + VERTICAL_PADDING);
         rt.anchoredPosition = new Vector2(positioning.x, positioning.y + VERTICAL_OFFSET);
 
+        foreach (Transform child in speechCanvas.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
         newElement.SetParent(speechCanvas.transform);
         yield return new WaitForSeconds(5);
-        Destroy(newElement.gameObject);
+        if (newElement != null) {
+            Destroy(newElement.gameObject);
+        }
     }
 
 }
