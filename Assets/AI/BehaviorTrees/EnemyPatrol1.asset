@@ -19,12 +19,13 @@ MonoBehaviour:
       tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;root&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;Visual Sensor&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;detectPrank&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;&quot;
+      name=&quot;detectPrank&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;foundPrank&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
-      aspectobjectvariable=&quot;&quot; aspect=&quot;prank&quot; /&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;wanderOrAttack&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;if prank == null&quot; debugbreak=&quot;False&quot; constraint=&quot;prank==null&quot;&gt;&lt;waypointpatrol
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;prank&amp;quot;&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;running&quot;
+      name=&quot;wanderOrAttack&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;if foundPrank == null&quot;
+      debugbreak=&quot;False&quot; constraint=&quot;foundPrank==null&quot;&gt;&lt;waypointpatrol
       waypointsetvariable=&quot;Patrol1&quot; waypointactiontype=&quot;patrol&quot;
       traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
       pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot; movetargetvariable=&quot;moveTarget&quot;
@@ -37,13 +38,14 @@ MonoBehaviour:
       /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attackPlayer&quot;
       debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&amp;quot;Visual Sensor&amp;quot;&quot;
-      repeatuntil=&quot;running&quot; priority=&quot;&quot; name=&quot;findPlayer&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;findPlayer&quot;
       matchtype=&quot;best&quot; entityobjectvariable=&quot;foundPlayer&quot; debugbreak=&quot;False&quot;
       consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&amp;quot;player&amp;quot;&quot; /&gt;&lt;action repeatuntil=&quot;running&quot;
-      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;VG90YWxBbW1v&quot;
-      namespace=&quot;(global)&quot; name=&quot;attackPlayer&quot; debugbreak=&quot;False&quot;
-      classname=&quot;AttackPlayer&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      aspect=&quot;&amp;quot;player&amp;quot;&quot; /&gt;&lt;action repeatuntil=&quot;&quot;
+      priority=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot; namespace=&quot;(global)&quot;
+      name=&quot;attackPlayer&quot; debugbreak=&quot;False&quot; classname=&quot;AttackPlayer&quot;
+      /&gt;&lt;timer waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []

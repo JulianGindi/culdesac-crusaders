@@ -10,9 +10,6 @@ using RAIN.Navigation;
 [RAINAction]
 public class AttackPlayer : RAINAction
 {
-
-	public Expression TotalAmmo = new Expression();
-	
     public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
