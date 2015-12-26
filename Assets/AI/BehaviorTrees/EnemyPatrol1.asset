@@ -37,14 +37,15 @@ MonoBehaviour:
       name=&quot;animatePlayerMovement&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
       /&gt;&lt;/waypointpatrol&gt;&lt;/constraint&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;attackPlayer&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;0&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; parametertype=&quot;float&quot; parametername=&quot;Speed&quot;
-      name=&quot;stopMovingAnimation&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;detect sensor=&quot;&amp;quot;Visual Sensor&amp;quot;&quot; repeatuntil=&quot;success&quot;
-      priority=&quot;&quot; name=&quot;findPlayer&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;foundPlayer&quot; debugbreak=&quot;False&quot; consistent=&quot;True&quot;
-      aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;player&amp;quot;&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;detect sensor=&quot;&amp;quot;Visual Sensor&amp;quot;&quot;
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;findPlayer&quot;
+      matchtype=&quot;best&quot; entityobjectvariable=&quot;foundPlayer&quot; debugbreak=&quot;False&quot;
+      consistent=&quot;True&quot; aspectvariable=&quot;&quot; aspectobjectvariable=&quot;&quot;
+      aspect=&quot;&amp;quot;player&amp;quot;&quot; /&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;foundPlayer&quot;
+      movespeed=&quot;&quot; facetarget=&quot;foundPlayer&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;3&quot; closeenoughangle=&quot;&quot; /&gt;&lt;action
+      repeatuntil=&quot;&quot; priority=&quot;&quot; parametervalues=&quot;&quot;
       parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;attackPlayer&quot;
       debugbreak=&quot;False&quot; classname=&quot;AttackPlayer&quot; /&gt;&lt;timer
       waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
