@@ -12,5 +12,4 @@ public class Prank : MonoBehaviour {
 		// This is a function that MUST be implemented by any prank class
 		void Trigger();
 	}
-
 }
