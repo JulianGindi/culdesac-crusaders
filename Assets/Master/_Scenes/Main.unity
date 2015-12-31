@@ -975,6 +975,20 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 445996, guid: b39429531915a4530b2906a96727eba9, type: 2}
   m_PrefabInternal: {fileID: 699692510}
+--- !u!114 &427394421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427394419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98dbd5854f604cac84245ba4287fde0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hitpoints: 20
+  MovementReduction: .25
+  Grounded: 0
 --- !u!1 &435621428
 GameObject:
   m_ObjectHideFlags: 0

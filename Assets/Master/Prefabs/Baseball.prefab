@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11409362}
   m_Layer: 0
   m_Name: Baseball
-  m_TagString: Prank
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayName: 
+  UI_icon: {fileID: 0}
 --- !u!135 &13517970
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -144,7 +145,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
-      value: Baseball
+      value: Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.x
