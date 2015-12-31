@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class PlayerDamage : MonoBehaviour {
-
-	public float Hitpoints = 20.0f; // Arbitrary default for now
+	
 	public float MovementReduction;
 	public bool Grounded = false;
 
