@@ -986,7 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d98dbd5854f604cac84245ba4287fde0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hitpoints: 20
   MovementReduction: .25
   Grounded: 0
 --- !u!1 &435621428
@@ -3737,7 +3736,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1539742521}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 5.51342907e-07}
-  m_LocalPosition: {x: 0, y: -.445439637, z: 0}
+  m_LocalPosition: {x: 3.97000003, y: -.445439637, z: -.389999986}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2141245731}
