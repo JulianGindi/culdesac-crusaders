@@ -13,11 +13,9 @@ public class Portal : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-		// We should check here to make sure it is a player
-		if (other.CompareTag("Player")) {
-        	other.SendMessage("CrossedPortalTo", exitPortal.GetComponent<Portal>(), SendMessageOptions.DontRequireReceiver);
-			other.GetComponent<PlayerMovement>().isOutside = false;
-		}
+		// We should check here to make sure it is a player trying to enter
+        other.SendMessage("CrossedPortalTo", exitPortal.GetComponent<Portal>(), SendMessageOptions.DontRequireReceiver);
+		other.GetComponent<PlayerMovement>().isOutside = false;
     }
 
     public Vector3 GetExitPoint() {
