@@ -18,16 +18,5 @@ public class AnimationDelegate : MonoBehaviour {
         Vector3 speedVector = new Vector3(moveHorizontal, 0, moveVertical);
         float speedMagnitude = Vector3.Magnitude(speedVector);
         anim.SetFloat("Speed", Mathf.Min(speedMagnitude, 1f));
-    }
-
-    void Update() {
-        if (Input.GetButton("Run"))
-        {
-            anim.SetBool("Is Running", true);
-        }
-        else
-        {
-            anim.SetBool("Is Running", false);
-        }
-    }
+    }	
 }

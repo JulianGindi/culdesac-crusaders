@@ -5,15 +5,19 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool isRunning = false;
 
+	public bool isOutside = true;
 	public float walkSpeed = 0.6f;
     public float runSpeed = 3.5f;
     public float turnSmoothing = 15f;
+
+	Animator anim;
     
 
     Rigidbody rb;
 
 	void Awake () {
 		rb = GetComponent<Rigidbody>();
+		anim = GetComponent<Animator>();
     }
 
 	void FixedUpdate () {
@@ -25,11 +29,13 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButton("Run"))
+        if (Input.GetButton("Run") || isOutside == true)
         {
             isRunning = true;
+			anim.SetBool("Is Running", true);
         } else {
             isRunning = false;
+			anim.SetBool("Is Running", false);
         }
     }
 

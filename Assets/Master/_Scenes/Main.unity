@@ -4954,6 +4954,10 @@ Prefab:
       propertyPath: exitPortal
       value: 
       objectReference: {fileID: 530587917}
+    - target: {fileID: 2362420, guid: 13f94086bb96e5e429f9376b81bf7b09, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13f94086bb96e5e429f9376b81bf7b09, type: 2}
   m_IsPrefabParent: 0

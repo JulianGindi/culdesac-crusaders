@@ -1867,6 +1867,22 @@ Prefab:
       propertyPath: speechCanvas
       value: 
       objectReference: {fileID: 435621428}
+    - target: {fileID: 197664, guid: f992f97161bcf7845950b75c073b0a89, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448018, guid: f992f97161bcf7845950b75c073b0a89, type: 2}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 1418160046}
+    - target: {fileID: 13654966, guid: f992f97161bcf7845950b75c073b0a89, type: 2}
+      propertyPath: m_Height
+      value: 12.6599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 13654966, guid: f992f97161bcf7845950b75c073b0a89, type: 2}
+      propertyPath: m_Radius
+      value: 4.28999996
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f992f97161bcf7845950b75c073b0a89, type: 2}
   m_IsPrefabParent: 0
@@ -7094,6 +7110,10 @@ Prefab:
       propertyPath: exitPortal
       value: 
       objectReference: {fileID: 530587917}
+    - target: {fileID: 2362420, guid: 13f94086bb96e5e429f9376b81bf7b09, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13f94086bb96e5e429f9376b81bf7b09, type: 2}
   m_IsPrefabParent: 0
