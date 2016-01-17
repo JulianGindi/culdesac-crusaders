@@ -2,6 +2,7 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
+/Assets/ShaderForge/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
