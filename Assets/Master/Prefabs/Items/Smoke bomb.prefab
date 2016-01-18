@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 410692}
   - 33: {fileID: 3323178}
   - 23: {fileID: 2343740}
-  - 95: {fileID: 9530902}
   m_Layer: 0
   m_Name: Smoke bomb
   m_TagString: Untagged
@@ -42,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6161103, y: 0.099999994, z: -13.962846}
+  m_LocalPosition: {x: -2.5464132, y: 0.0000005364418, z: -5.0935316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419814}
@@ -70,7 +69,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 673bc0ec5f17c8845ba5d8d9b1354ce7, type: 2}
+  - {fileID: 2100000, guid: b686bd42b2739cb4a9ac55e4ac4b56f4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -93,23 +92,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154868}
   m_Mesh: {fileID: 4300004, guid: 16c560b690825804fbc39baf19a0b5ff, type: 3}
---- !u!95 &9530902
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154868}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 16c560b690825804fbc39baf19a0b5ff, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!198 &19832096
 ParticleSystem:
   m_ObjectHideFlags: 1
