@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject spawnLocationObj;
     public GameObject projectileToSpawn;
+	public GameObject smokeBomb;
 	public float launchForce = 1000f;
 	public float launchAngle = 30.0f;
 
@@ -13,10 +14,7 @@ public class PlayerController : MonoBehaviour {
 	void Update() {
         if (Input.GetButtonDown("Throw")) {
             ThrowCurrentPrank();
-        }
-
-        if (Input.GetButtonDown("Pickup/Place"))
-        {
+        } else if (Input.GetButtonDown("Pickup/Place")) {
             if (prankToAdd != null)
             {
                 Pickup();
@@ -24,7 +22,9 @@ public class PlayerController : MonoBehaviour {
             else {
                 PlaceCurrentPrank();
             }
-        }
+        } else if (Input.GetButtonDown("Evade")) {
+			DropSmokeBomb();
+		}
     }
 
     void Pickup() {
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void DropSmokeBomb() {
-
+		GameObject bomb = Instantiate(smokeBomb, spawnLocationObj.transform.position, transform.rotation) as GameObject;
 	}
 
 }
