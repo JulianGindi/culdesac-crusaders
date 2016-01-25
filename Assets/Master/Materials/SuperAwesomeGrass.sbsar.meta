@@ -1,105 +1,28 @@
 fileFormatVersion: 2
-guid: a8b8969b37b894b439b4c65bc1633bb9
-timeCreated: 1453176532
+guid: f59a710bc9e65c34e9332659eed09f34
+timeCreated: 1453441833
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
-    name: stylizedWood_01
-    prototypeName: stylizedWood_01
+    name: SuperAwesomeGrass
+    prototypeName: SuperAwesomeGrass
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _NORMALMAP _PARALLAXMAP
+    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
     renderQueue: -1
     lightmapFlags: 5
     inputs:
+    - name: $pixelsize
+      value:
+        scalar[0]: 1
+        scalar[1]: 1
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
     - name: $randomseed
       value:
-        scalar[0]: 8583
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: $outputsize
-      value:
-        scalar[0]: 8
-        scalar[1]: 8
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Toggle_Roughness
-      value:
-        scalar[0]: 1
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Toggle_Knots
-      value:
         scalar[0]: 0
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Knots_Offset
-      value:
-        scalar[0]: -0.0265939
-        scalar[1]: 0.669972
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Knots_Shape_Scale
-      value:
-        scalar[0]: 1
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Tiling_X_Amount
-      value:
-        scalar[0]: 1
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Tiling_Y_Amount
-      value:
-        scalar[0]: 12
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Size_Random_X
-      value:
-        scalar[0]: 0.255
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Size_Random_Y
-      value:
-        scalar[0]: 0.5
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Hue
-      value:
-        scalar[0]: 0.5
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Saturation
-      value:
-        scalar[0]: 0.6
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Lightness
-      value:
-        scalar[0]: 0.51
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -107,7 +30,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 0.3, y: 0.3}
+      scale: {x: 2, y: 2}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -119,14 +42,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -137,17 +60,31 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _EmissionMap
+            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _ParallaxMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 2, y: 2}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 2, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -159,20 +96,6 @@ SubstanceImporter:
         data:
           first:
             name: _DetailAlbedoMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _OcclusionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -192,20 +115,24 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
-            name: _Parallax
-          second: 0.02
-        data:
-          first:
             name: _ZWrite
           second: 1
         data:
           first:
             name: _Glossiness
-          second: 0.77
+          second: 0.5
+        data:
+          first:
+            name: _Metallic
+          second: 0
         data:
           first:
             name: _BumpScale
           second: 1
+        data:
+          first:
+            name: _Parallax
+          second: 0.005
         data:
           first:
             name: _OcclusionStrength
@@ -222,10 +149,6 @@ SubstanceImporter:
           first:
             name: _Mode
           second: 0
-        data:
-          first:
-            name: _Metallic
-          second: 0
       colors:
         data:
           first:
@@ -236,17 +159,22 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: stylizedWood_01_basecolor
+    - name: SuperAwesomeGrass_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: stylizedWood_01_normal
+    - name: SuperAwesomeGrass_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: stylizedWood_01_height
+    - name: SuperAwesomeGrass_metallic
+      alphaSource: 7
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: SuperAwesomeGrass_height
       alphaSource: 0
       filterMode: 1
       aniso: 1
@@ -255,20 +183,24 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 674922353
+      baseUID: 1778321960
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 674922355
+      baseUID: 1778321962
+    - shaderProp:
+        name: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 1778321966
     - shaderProp:
         name: _ParallaxMap
       material: {instanceID: 0}
-      baseUID: 698956929
+      baseUID: 1804778805
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
-      textureWidth: 1024
-      textureHeight: 1024
+      textureWidth: 512
+      textureHeight: 512
       textureFormat: 0
       loadingBehavior: 1
   deletedPrototypes: []
