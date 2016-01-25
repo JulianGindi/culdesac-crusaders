@@ -5,21 +5,16 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject spawnLocationObj;
     public GameObject projectileToSpawn;
+	public GameObject smokeBomb;
 	public float launchForce = 1000f;
 	public float launchAngle = 30.0f;
 
 	GameObject prankToAdd;
 
-	void Start() {
-    }
-
 	void Update() {
         if (Input.GetButtonDown("Throw")) {
             ThrowCurrentPrank();
-        }
-
-        if (Input.GetButtonDown("Pickup/Place"))
-        {
+        } else if (Input.GetButtonDown("Pickup/Place")) {
             if (prankToAdd != null)
             {
                 Pickup();
@@ -27,7 +22,9 @@ public class PlayerController : MonoBehaviour {
             else {
                 PlaceCurrentPrank();
             }
-        }
+        } else if (Input.GetButtonDown("Evade")) {
+			DropSmokeBomb();
+		}
     }
 
     void Pickup() {
@@ -56,8 +53,7 @@ public class PlayerController : MonoBehaviour {
         if (PrankManager.instance.activePrank != null) {
             // Now we will create an instance of whatever the 'current prank' is
             GameObject placedPrank = Instantiate(PrankManager.instance.activePrank, spawnLocationObj.transform.position, Quaternion.identity) as GameObject;
-            placedPrank.SetActive(true);
-            // TODO: Figure out how to do this whole trigger thingy
+			placedPrank.SetActive(true);
             placedPrank.SendMessage("Trigger");
         }
 	}
@@ -75,12 +71,12 @@ public class PlayerController : MonoBehaviour {
             thrownObject.SetActive(true);
             thrownObject.GetComponent<Rigidbody>().velocity = launchForce * norm.normalized;
 
-            // TODO: Figure out how to do this whole trigger thingy
             thrownObject.SendMessage("Trigger");
         }
     }
 
-	void UseOrThrow() {
-        
-    }
+	void DropSmokeBomb() {
+		GameObject bomb = Instantiate(smokeBomb, spawnLocationObj.transform.position, transform.rotation) as GameObject;
+	}
+
 }

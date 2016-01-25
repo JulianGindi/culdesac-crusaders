@@ -53,7 +53,9 @@ MonoBehaviour:
       parameters=&quot;&quot; namespace=&quot;(global)&quot; name=&quot;attackPlayer&quot;
       debugbreak=&quot;False&quot; classname=&quot;AttackPlayer&quot; /&gt;&lt;timer
       waitforsec=&quot;2&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
-      name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;/sequencer&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;vision obscured?&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;/parallel&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
