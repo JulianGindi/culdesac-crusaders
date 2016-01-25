@@ -520,6 +520,19 @@ MonoBehaviour:
   indicatorPosition: {fileID: 144644678}
   coverCount: 1
   isCovering: 0
+  playerCoverDistance: {x: 0, y: 0, z: 0}
+--- !u!135 &1169076854
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169076851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.43
+  m_Center: {x: 2.0000079, y: 0.771551, z: -1.09}
 --- !u!4 &1169076856 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f13f01e3b6cfefc4189f0384e260d942, type: 3}

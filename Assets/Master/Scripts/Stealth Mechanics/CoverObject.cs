@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CoverObject : MonoBehaviour {
 
@@ -9,35 +10,38 @@ public class CoverObject : MonoBehaviour {
 	public int coverCount = 1; // Number of players this object can cover
 	public bool isCovering = false; // Is this object currently covering any player?
 
-	GameObject playerObject; // Reference where we will store the closest player
+	List<GameObject> playersCovered; // Reference where we will store the players being covered
 	bool isIndicating; // Don't keep indicating if already indicating
-	int playersCovered;
+
+	List<GameObject> playersInRange; // Players who can seek cover but have not yet
 
 	void Start() {
-		playersCovered = 0;
 		isIndicating = false;
+
+		playersCovered = new List<GameObject>();
+		playersInRange = new List<GameObject>();
+
 	}
 
 	void Update() {
-		if (playerNearby() && canCoverAnotherPlayer() && !isIndicating) {
+		if ((playersInRange.Count > 0) && canCoverAnotherPlayer() && !isIndicating) {
 			displayCoverIndicator();
 			isIndicating = true;
 		}
 	}
 
-	bool playerNearby() {
-		// We basically want to know if there is another "cover object" 
-		// in between this object and the player
-		return true;
-	}
-
-	bool canCoverAnotherPlayer() {
-		return (playersCovered < coverCount);
+	void OnTriggerEnter(Collider other) {
+		if (other.CompareTag("Player"))
+			playersInRange.Add(other.gameObject);
 	}
 
 	void displayCoverIndicator() {
 		// Instantiate cover indicator behind object
 		Transform spawnLocation; // Middle of object and just slightly behind
 		Instantiate(coverIndicator, indicatorPosition.position, Quaternion.identity);
+	}
+		
+	bool canCoverAnotherPlayer() {
+		return (playersCovered.Count < coverCount);
 	}
 }
