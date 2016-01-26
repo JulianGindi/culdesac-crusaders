@@ -1,25 +1,18 @@
 fileFormatVersion: 2
-guid: a8b8969b37b894b439b4c65bc1633bb9
-timeCreated: 1453176532
+guid: 040d5344d1d805f4385cebef583e677a
+timeCreated: 1453524711
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
-    name: stylizedWood_01
-    prototypeName: stylizedWood_01
+    name: stacked_rectangular_stones
+    prototypeName: stacked_rectangular_stones
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _NORMALMAP _PARALLAXMAP
+    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
     renderQueue: -1
     lightmapFlags: 5
     inputs:
-    - name: $randomseed
-      value:
-        scalar[0]: 8583
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
     - name: $outputsize
       value:
         scalar[0]: 8
@@ -27,87 +20,178 @@ SubstanceImporter:
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Toggle_Roughness
+    - name: $pixelsize
       value:
         scalar[0]: 1
-        scalar[1]: 0
+        scalar[1]: 1
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Toggle_Knots
+    - name: $randomseed
       value:
         scalar[0]: 0
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Knots_Offset
+    - name: diffuse
       value:
-        scalar[0]: -0.0265939
-        scalar[1]: 0.669972
+        scalar[0]: 0
+        scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Knots_Shape_Scale
+    - name: basecolor
       value:
         scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Tiling_X_Amount
+    - name: normal
       value:
         scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Tiling_Y_Amount
+    - name: specular
       value:
-        scalar[0]: 12
+        scalar[0]: 0
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Size_Random_X
+    - name: glossiness
       value:
-        scalar[0]: 0.255
+        scalar[0]: 0
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Size_Random_Y
+    - name: roughness
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: metallic
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: ambient_occlusion
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: height
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: luminosity
       value:
         scalar[0]: 0.5
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Hue
+    - name: contrast
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: hue_shift
+      value:
+        scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: saturation
       value:
         scalar[0]: 0.5
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Saturation
+    - name: normal_intensity
       value:
-        scalar[0]: 0.6
+        scalar[0]: 0.5
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
-    - name: Lightness
+    - name: normal_format
       value:
-        scalar[0]: 0.51
+        scalar[0]: 0
         scalar[1]: 0
         scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: ao_spreading
+      value:
+        scalar[0]: 0.5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: height_range
+      value:
+        scalar[0]: 0.25
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: height_position
+      value:
+        scalar[0]: 0.5
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: stones_x_amount
+      value:
+        scalar[0]: 6
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: stones_y_amount
+      value:
+        scalar[0]: 14
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: variations
+      value:
+        scalar[0]: 1
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: color
+      value:
+        scalar[0]: 0.611765
+        scalar[1]: 0.596078
+        scalar[2]: 0.568627
         scalar[3]: 0
         texture: {instanceID: 0}
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 0.3, y: 0.3}
+      scale: {x: 12, y: 12}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -119,14 +203,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 12, y: 12}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 12, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -137,17 +221,31 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _EmissionMap
+            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 12, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _ParallaxMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.3, y: 0.3}
+            scale: {x: 12, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 12, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 12, y: 12}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -159,20 +257,6 @@ SubstanceImporter:
         data:
           first:
             name: _DetailAlbedoMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _OcclusionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -192,20 +276,24 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
-            name: _Parallax
-          second: 0.02
-        data:
-          first:
             name: _ZWrite
           second: 1
         data:
           first:
             name: _Glossiness
-          second: 0.77
+          second: 0.5
+        data:
+          first:
+            name: _Metallic
+          second: 0
         data:
           first:
             name: _BumpScale
           second: 1
+        data:
+          first:
+            name: _Parallax
+          second: 0.02
         data:
           first:
             name: _OcclusionStrength
@@ -222,10 +310,6 @@ SubstanceImporter:
           first:
             name: _Mode
           second: 0
-        data:
-          first:
-            name: _Metallic
-          second: 0
       colors:
         data:
           first:
@@ -236,17 +320,27 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: stylizedWood_01_basecolor
+    - name: stacked_rectangular_stones_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: stylizedWood_01_normal
+    - name: stacked_rectangular_stones_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: stylizedWood_01_height
+    - name: stacked_rectangular_stones_metallic
+      alphaSource: 7
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: stacked_rectangular_stones_ambient_occlusion
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: stacked_rectangular_stones_height
       alphaSource: 0
       filterMode: 1
       aniso: 1
@@ -255,20 +349,28 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 674922353
+      baseUID: 1848177005
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 674922355
+      baseUID: 1848177007
+    - shaderProp:
+        name: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 1848176999
     - shaderProp:
         name: _ParallaxMap
       material: {instanceID: 0}
-      baseUID: 698956929
+      baseUID: 1848176995
+    - shaderProp:
+        name: _OcclusionMap
+      material: {instanceID: 0}
+      baseUID: 1848176993
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
-      textureWidth: 1024
-      textureHeight: 1024
+      textureWidth: 512
+      textureHeight: 512
       textureFormat: 0
       loadingBehavior: 1
   deletedPrototypes: []
