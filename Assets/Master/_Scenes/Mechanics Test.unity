@@ -184,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInfamy: 0
   personObject: {fileID: 1418160046}
+  activePlayer: {fileID: 0}
 --- !u!4 &403079830
 Transform:
   m_ObjectHideFlags: 0
@@ -520,7 +521,6 @@ MonoBehaviour:
   indicatorPosition: {fileID: 144644678}
   coverCount: 1
   isCovering: 0
-  playerCoverDistance: {x: 0, y: 0, z: 0}
 --- !u!135 &1169076854
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169076851}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.43
@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034962ee059594e508f5fe1e5e96beb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   isInCover: 0
 --- !u!1 &1485040572
 GameObject:

@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 	public float playerInfamy;
 	public GameObject personObject;
 
+	public GameObject activePlayer; // Player can switch between their two characters
+
     private PlayerController pc;
     private PlayerMovement pm;
     private AnimationDelegate ad;
