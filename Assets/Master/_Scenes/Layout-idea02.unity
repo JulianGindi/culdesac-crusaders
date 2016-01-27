@@ -2866,6 +2866,64 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1001 &781045698
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.289154
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.275162
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300020, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b07f8f24d4fe59409dc8f3ff1a8e8b8, type: 2}
+    - target: {fileID: 2300014, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e1897f0de721cd04abc99760747b6d38, type: 2}
+    - target: {fileID: 2300010, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6f4c174376df024a84f2751442cbb6b, type: 2}
+    - target: {fileID: 2300022, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c2743531e0bbb643abbc7b90a757a87, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b622f3419c1fcd44fbd27aa17223ea52, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &789562961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,8 +4987,8 @@ Terrain:
   m_CastShadows: 1
   m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
-  m_MaterialType: 3
+  m_ReflectionProbeUsage: 0
+  m_MaterialType: 0
   m_LegacySpecular:
     serializedVersion: 2
     rgba: 4286545791

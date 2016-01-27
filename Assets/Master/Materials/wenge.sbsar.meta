@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a0211c0b941ceb246bc947eb6ff01fe4
-timeCreated: 1453313764
+timeCreated: 1453773922
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -240,7 +240,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 0.25, y: 0.25}
+      scale: {x: 1, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -252,14 +252,14 @@ SubstanceImporter:
             name: _MainTex
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.25}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.2}
+            scale: {x: 1, y: 0.25}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -270,31 +270,17 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _MetallicGlossMap
+            name: _EmissionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.2}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _ParallaxMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.2}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _OcclusionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.2}
-            offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _EmissionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 0.25, y: 0.25}
+            scale: {x: 1, y: 0.25}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -309,6 +295,20 @@ SubstanceImporter:
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _OcclusionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 0.25}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 0.25}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -325,6 +325,10 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
+            name: _Parallax
+          second: 0.02
+        data:
+          first:
             name: _ZWrite
           second: 1
         data:
@@ -333,16 +337,8 @@ SubstanceImporter:
           second: 0.5
         data:
           first:
-            name: _Metallic
-          second: 0
-        data:
-          first:
             name: _BumpScale
           second: 1
-        data:
-          first:
-            name: _Parallax
-          second: 0.02
         data:
           first:
             name: _OcclusionStrength
@@ -358,6 +354,10 @@ SubstanceImporter:
         data:
           first:
             name: _Mode
+          second: 0
+        data:
+          first:
+            name: _Metallic
           second: 0
       colors:
         data:
@@ -404,10 +404,6 @@ SubstanceImporter:
       material: {instanceID: 0}
       baseUID: 126551537
     - shaderProp:
-        name: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 126551545
-    - shaderProp:
         name: _ParallaxMap
       material: {instanceID: 0}
       baseUID: 126551493
@@ -415,6 +411,10 @@ SubstanceImporter:
         name: _OcclusionMap
       material: {instanceID: 0}
       baseUID: 126551547
+    - shaderProp:
+        name: _MetallicGlossMap
+      material: {instanceID: 0}
+      baseUID: 126551545
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
