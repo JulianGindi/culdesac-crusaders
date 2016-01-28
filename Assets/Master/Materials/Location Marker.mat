@@ -78,6 +78,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_2225
+        second:
+          m_Texture: {fileID: 2800000, guid: 61f57859a9948054e87689034b8a4e8b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PositionMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 61f57859a9948054e87689034b8a4e8b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
