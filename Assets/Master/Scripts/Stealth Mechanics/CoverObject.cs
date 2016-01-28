@@ -23,8 +23,8 @@ public class CoverObject : MonoBehaviour {
 
 	public void DisplayCoverIndicator() {
 		// Instantiate cover indicator behind object
-		Transform spawnLocation; // Middle of object and just slightly behind
-		Instantiate(coverIndicator, indicatorPosition.position, Quaternion.identity);
+		Vector3 spawnLocation = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z + .5f);
+		Instantiate(coverIndicator, spawnLocation, Quaternion.identity);
 	}
 
 	public void ClearCoveredPlayers() {
