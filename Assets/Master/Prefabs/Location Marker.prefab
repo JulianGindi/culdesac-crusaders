@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300286}
   - 95: {fileID: 9581930}
   m_Layer: 0
-  m_Name: location_marker
+  m_Name: Location Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,8 +37,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152722}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 2100000, guid: 44c52529f1c398b4d849cc7c7255ba32, type: 2}
   m_SubsetIndices: 
