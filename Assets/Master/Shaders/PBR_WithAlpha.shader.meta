@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: b5f7e331a10d4484299189362804040b
+timeCreated: 1454269153
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _Metallic: {fileID: -1742503995, guid: a0211c0b941ceb246bc947eb6ff01fe4, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
