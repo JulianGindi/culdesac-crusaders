@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a0211c0b941ceb246bc947eb6ff01fe4
-timeCreated: 1453773922
+timeCreated: 1454267906
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -259,7 +259,7 @@ SubstanceImporter:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 0.25}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -270,17 +270,24 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _EmissionMap
+            name: _ParallaxMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _ParallaxMap
+            name: _OcclusionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 0.25}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _EmissionMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -298,17 +305,10 @@ SubstanceImporter:
             offset: {x: 0, y: 0}
         data:
           first:
-            name: _OcclusionMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 0.25}
-            offset: {x: 0, y: 0}
-        data:
-          first:
             name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 0.25}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -359,6 +359,14 @@ SubstanceImporter:
           first:
             name: _Metallic
           second: 0
+        data:
+          first:
+            name: _Gloss
+          second: 0
+        data:
+          first:
+            name: _Alpha
+          second: 1
       colors:
         data:
           first:
