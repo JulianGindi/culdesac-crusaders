@@ -18,6 +18,7 @@ ModelImporter:
     100020: Wheels_Rims
     100022: Exterior
     100024: Windshield
+    100026: UnderCarriage
     400000: Car
     400002: //RootNode
     400004: Cube
@@ -31,6 +32,7 @@ ModelImporter:
     400020: Wheels_Rims
     400022: Exterior
     400024: Windshield
+    400026: UnderCarriage
     2300000: Car
     2300002: Cube
     2300004: Fender
@@ -43,6 +45,7 @@ ModelImporter:
     2300018: Wheels_Rims
     2300020: Exterior
     2300022: Windshield
+    2300024: UnderCarriage
     3300000: Car
     3300002: Cube
     3300004: Fender
@@ -55,6 +58,7 @@ ModelImporter:
     3300018: Wheels_Rims
     3300020: Exterior
     3300022: Windshield
+    3300024: UnderCarriage
     4300000: Wipers
     4300002: Rims
     4300004: Cube
@@ -67,6 +71,7 @@ ModelImporter:
     4300018: Handles_Wipers_Emblem
     4300020: Windshield
     4300022: Exterior
+    4300024: UnderCarriage
     7400000: Default Take
     9500000: //RootNode
   materials:
