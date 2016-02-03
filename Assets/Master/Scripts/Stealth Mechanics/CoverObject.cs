@@ -9,13 +9,16 @@ public class CoverObject : MonoBehaviour {
 
 	public int coverCount = 1; // Number of players this object can cover
 	public bool isCovering = false; // Is this object currently covering any player?
+	public bool displayCover = false; // Select "true" to automatically display the cover indicator
 
 	List<GameObject> playersCovered; // Reference where we will store the players being covered
 
 
 	void Start() {
 		playersCovered = new List<GameObject>();
-		DisplayCoverIndicator();
+
+		if (displayCover)
+			DisplayCoverIndicator();
 	}
 
 	bool canCoverAnotherPlayer() {
