@@ -21,8 +21,8 @@ public class PlayerStealth : MonoBehaviour {
 			float horizontalI = Input.GetAxis("Horizontal");
 			float verticalI = Input.GetAxis("Vertical");
 
-			Quaternion coverDirection = rotationBasedOnInput(horizontalI, verticalI);
-			GameObject coverObject = determineCoverObjectBasedOnRaycast(coverDirection);
+			//Quaternion coverDirection = rotationBasedOnInput(horizontalI, verticalI);
+			//GameObject coverObject = determineCoverObjectBasedOnRaycast(coverDirection);
 		}
 	}
 
@@ -47,13 +47,13 @@ public class PlayerStealth : MonoBehaviour {
 	Quaternion rotationBasedOnInput(float horizontal, float vertical) {
 		Vector3 targetDirection = new Vector3(horizontal, 0f, vertical);
 		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+
+		return targetRotation;
 	}
 
-	GameObject determineCoverObjectBasedOnRaycast(Quaternion direction) {
-		GameObject nextCoverObject;
+	//GameObject determineCoverObjectBasedOnRaycast(Quaternion direction) {
 		// Draw a raycast based on provided direction
 		// check if you get a "CoverObject"
 		// return said CoverObject
-		return nextCoverObject;
-	}
+	//}
 }
