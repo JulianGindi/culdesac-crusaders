@@ -27,7 +27,6 @@ public class CoverObject : MonoBehaviour {
 
 	public void DisplayCoverIndicator() {
 		// Instantiate cover indicator behind object
-		Transform spawnLocation; // Middle of object and just slightly behind
 		Instantiate(coverIndicator, indicatorPosition.position, Quaternion.identity);
 	}
 
