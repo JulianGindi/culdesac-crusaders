@@ -15,6 +15,7 @@ public class CoverObject : MonoBehaviour {
 
 	void Start() {
 		playersCovered = new List<GameObject>();
+		DisplayCoverIndicator();
 	}
 
 	bool canCoverAnotherPlayer() {
