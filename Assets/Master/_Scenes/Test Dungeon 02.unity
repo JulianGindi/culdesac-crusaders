@@ -3676,7 +3676,7 @@ MonoBehaviour:
   indicatorPosition: {fileID: 1352620100}
   coverCount: 1
   isCovering: 0
-  displayCover: 0
+  displayCover: 1
 --- !u!4 &974033266 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 934fa0baa9bf8a1448bbad6bb9751cd6, type: 3}
