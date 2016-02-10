@@ -14,23 +14,30 @@ public class PlayerStealth : MonoBehaviour {
 	void Update() {
 		if (isInCover) {
 			GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-			determineCoverObjectBasedOnRaycast();
+			GameObject coverObject = determineCoverObjectBasedOnRaycast();
 		}
 	}
 		
 	// Will eventually want to return hit gameobject
-	void determineCoverObjectBasedOnRaycast() {
+	GameObject determineCoverObjectBasedOnRaycast() {
 		RaycastHit hit;
-		GameObject hitObject;
+
+		// Will return null if we don't hit a valid cover object
+		GameObject hitObject = null;
 
 		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 		Vector3 drawPos = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
+
+		// Debug Crap
 		Debug.DrawRay(drawPos, forward, Color.green, coverDistance, true);
+
+		// The Meat
 		if (Physics.Raycast(drawPos, forward, out hit, coverDistance)) {
 			hitObject = hit.collider.gameObject;
 			if (hitObject.CompareTag("CoverObject")) {
-				hitObject.GetComponent<CoverObject>().DisplayCoverIndicator();	
+				hitObject.GetComponent<CoverObject>().DisplayCoverIndicator();
 			}
 		}
+		return hitObject;
 	}
 }
