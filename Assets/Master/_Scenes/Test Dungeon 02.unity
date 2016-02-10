@@ -3317,6 +3317,10 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f13f01e3b6cfefc4189f0384e260d942, type: 3}
+      propertyPath: m_TagString
+      value: CoverObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f13f01e3b6cfefc4189f0384e260d942, type: 3}
   m_IsPrefabParent: 0
@@ -8849,6 +8853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   isInCover: 1
+  coverDistance: 10
 --- !u!1 &2092999568
 GameObject:
   m_ObjectHideFlags: 0

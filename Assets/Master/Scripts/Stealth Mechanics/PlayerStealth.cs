@@ -7,46 +7,30 @@ public class PlayerStealth : MonoBehaviour {
 
 	public bool isActive = true; // Is this player currently selected and ready to move
 	public bool isInCover;
+	public float coverDistance = 20f;
 
 	List<Collider> possibleCoverPositions = new List<Collider>();
 
 	void Update() {
-		drawDebugRaycast();
-
 		if (isInCover) {
 			GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-			//GameObject coverObject = determineCoverObjectBasedOnRaycast(coverDirection);
-		}
-	}
-
-	void OnTriggerEnter(Collider other) {
-		if(other.CompareTag("CoverObject") && !possibleCoverPositions.Contains(other)) {
-			possibleCoverPositions.Add(other);
+			determineCoverObjectBasedOnRaycast();
 		}
 	}
 		
-	void OnTriggerExit(Collider other) {
-		if(other.CompareTag("CoverObject") && possibleCoverPositions.Contains(other)) {
-			possibleCoverPositions.Remove(other);
-		}
-	}
+	// Will eventually want to return hit gameobject
+	void determineCoverObjectBasedOnRaycast() {
+		RaycastHit hit;
+		GameObject hitObject;
 
-	void drawDebugRaycast() {
 		Vector3 forward = transform.TransformDirection(Vector3.forward) * 10;
 		Vector3 drawPos = new Vector3(transform.position.x, transform.position.y + .5f, transform.position.z);
-		Debug.DrawRay(drawPos, forward, Color.green, 20f, true);
+		Debug.DrawRay(drawPos, forward, Color.green, coverDistance, true);
+		if (Physics.Raycast(drawPos, forward, out hit, coverDistance)) {
+			hitObject = hit.collider.gameObject;
+			if (hitObject.CompareTag("CoverObject")) {
+				hitObject.GetComponent<CoverObject>().DisplayCoverIndicator();	
+			}
+		}
 	}
-
-	Quaternion rotationBasedOnInput(float horizontal, float vertical) {
-		Vector3 targetDirection = new Vector3(horizontal, 0f, vertical);
-		Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-
-		return targetRotation;
-	}
-
-	//GameObject determineCoverObjectBasedOnRaycast(Quaternion direction) {
-		// Draw a raycast based on provided direction
-		// check if you get a "CoverObject"
-		// return said CoverObject
-	//}
 }
