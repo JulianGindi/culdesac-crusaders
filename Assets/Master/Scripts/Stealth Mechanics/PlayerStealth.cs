@@ -10,18 +10,11 @@ public class PlayerStealth : MonoBehaviour {
 
 	List<Collider> possibleCoverPositions = new List<Collider>();
 
-	void Start () {
-		isInCover = false;
-	}
-
 	void Update() {
 		drawDebugRaycast();
 
 		if (isInCover) {
-			float horizontalI = Input.GetAxis("Horizontal");
-			float verticalI = Input.GetAxis("Vertical");
-
-			//Quaternion coverDirection = rotationBasedOnInput(horizontalI, verticalI);
+			GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
 			//GameObject coverObject = determineCoverObjectBasedOnRaycast(coverDirection);
 		}
 	}

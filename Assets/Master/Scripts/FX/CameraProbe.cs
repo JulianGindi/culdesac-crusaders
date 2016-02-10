@@ -25,7 +25,7 @@ public class CameraProbe : MonoBehaviour {
             probeCollider.transform.position + new Vector3(probeCollider.size.x * adjustment, 0f, -probeCollider.size.z * adjustment)
         };
         foreach (Vector3 vec in targets) {
-            Debug.DrawLine(cam.transform.position + new Vector3(0,-5.0f,0), vec, Color.green);
+            //Debug.DrawLine(cam.transform.position + new Vector3(0,-5.0f,0), vec, Color.green);
             if (Physics.Linecast(cam.transform.position, vec, out hit))
             {
                 //if (hit.collider.gameObject.tag == "NPC")
